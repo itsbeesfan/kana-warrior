@@ -53,6 +53,17 @@ layout_mode = 2
 custom_minimum_size = Vector2(50, 0)
 layout_mode = 2
 
+[node name="health" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -192.0
+offset_bottom = 23.0
+grow_horizontal = 0
+theme_override_font_sizes/font_size = 24
+text = "health: 3"
+
 [connection signal="pressed" from="buttons/choice1" to="." method="_on_choice_1_pressed"]
 [connection signal="pressed" from="buttons/choice2" to="." method="_on_choice_2_pressed"]
 [connection signal="pressed" from="buttons/choice3" to="." method="_on_choice_3_pressed"]

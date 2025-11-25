@@ -9,6 +9,7 @@ var hiragana := {
 }
 
 var correct_answer := ""
+var health := 3
 
 func _ready():
 	randomize()
@@ -41,9 +42,21 @@ func check_answer(choice: String):
 		print("correcto!!!")
 	else:
 		print("incorrecto!")
+		damage()
 		
 	new_question()
 
+func damage():
+	health -= 1
+	$health.text = "health: " + str(health)
+	if health <= 0:
+		game_over()
+		
+func game_over():
+	print("se acabo broki")
+	$buttons/choice1.disabled = true
+	$buttons/choice2.disabled = true
+	$buttons/choice3.disabled = true
 
 func _on_choice_1_pressed() -> void:
 	check_answer($buttons/choice1.text)
