@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://0g10r0q38tuq"]
+[gd_scene load_steps=4 format=3 uid="uid://0g10r0q38tuq"]
 
 [ext_resource type="Script" uid="uid://cw3c1rtetm36v" path="res://quiz.gd" id="1_kninm"]
 [ext_resource type="Texture2D" uid="uid://c7nnbufssmhhr" path="res://background.png" id="2_k7kv1"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_k7kv1"]
 
 [node name="quiz" type="Control"]
 layout_mode = 3
@@ -51,14 +53,17 @@ alignment = 1
 [node name="choice1" type="Button" parent="buttons"]
 custom_minimum_size = Vector2(50, 0)
 layout_mode = 2
+theme_override_styles/focus = SubResource("StyleBoxEmpty_k7kv1")
 
 [node name="choice2" type="Button" parent="buttons"]
 custom_minimum_size = Vector2(50, 0)
 layout_mode = 2
+theme_override_styles/focus = SubResource("StyleBoxEmpty_k7kv1")
 
 [node name="choice3" type="Button" parent="buttons"]
 custom_minimum_size = Vector2(50, 0)
 layout_mode = 2
+theme_override_styles/focus = SubResource("StyleBoxEmpty_k7kv1")
 
 [node name="health" type="Label" parent="."]
 layout_mode = 1
