@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://0g10r0q38tuq"]
 
 [ext_resource type="Script" uid="uid://cw3c1rtetm36v" path="res://quiz.gd" id="1_kninm"]
-[ext_resource type="Texture2D" uid="uid://c7nnbufssmhhr" path="res://background.png" id="2_k7kv1"]
+[ext_resource type="Texture2D" uid="uid://c7nnbufssmhhr" path="res://background-dojo.png" id="2_k7kv1"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_k7kv1"]
 

@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://dou5sk06gbaqa"]
 
-[ext_resource type="Texture2D" uid="uid://c7nnbufssmhhr" path="res://background.png" id="1_3pj0e"]
+[ext_resource type="Texture2D" uid="uid://c7nnbufssmhhr" path="res://background-dojo.png" id="1_3pj0e"]
 [ext_resource type="Script" uid="uid://d0dk5xm2a7n1s" path="res://start_screen.gd" id="1_ev681"]
 [ext_resource type="Texture2D" uid="uid://c7d4g5thmbwjj" path="res://images/godotwaka2.png" id="2_ev681"]
 
