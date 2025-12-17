@@ -1,0 +1,35 @@
+extends Control
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+
+
+func _on_first_five_button_pressed() -> void:
+	Global.selected_kana_set = Global.HIRAGANA_5
+	Global.selected_background = "res://background-dojo.png"
+	get_tree().change_scene_to_file("res://quiz.tscn")
+
+
+func _on_first_fifteen_button_pressed() -> void:
+	Global.selected_kana_set = Global.HIRAGANA_15
+	Global.selected_background = "res://background-forest.png"
+	get_tree().change_scene_to_file("res://quiz.tscn")
+
+
+func _on_first_twenty_five_button_pressed() -> void:
+	pass # Replace with function body.
+
+
+func _on_first_thirty_five_button_pressed() -> void:
+	pass # Replace with function body.
+
+
+func _on_all_hiragana_button_pressed() -> void:
+	pass # Replace with function body.

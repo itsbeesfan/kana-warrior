@@ -1,4 +1,6 @@
-[gd_scene format=3 uid="uid://diri6chvmpdno"]
+[gd_scene load_steps=2 format=3 uid="uid://diri6chvmpdno"]
+
+[ext_resource type="Script" uid="uid://cnc2xrfodphdl" path="res://select_level.gd" id="1_8401x"]
 
 [node name="SelectLevel" type="Control"]
 layout_mode = 3
@@ -8,6 +10,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
+script = ExtResource("1_8401x")
 
 [node name="SelectLabel" type="Label" parent="."]
 layout_mode = 1
@@ -121,3 +124,9 @@ grow_horizontal = 2
 grow_vertical = 0
 focus_mode = 0
 text = "BACK"
+
+[connection signal="pressed" from="FirstFiveButton" to="." method="_on_first_five_button_pressed"]
+[connection signal="pressed" from="FirstFifteenButton" to="." method="_on_first_fifteen_button_pressed"]
+[connection signal="pressed" from="FirstTwentyFiveButton" to="." method="_on_first_twenty_five_button_pressed"]
+[connection signal="pressed" from="FirstThirtyFiveButton" to="." method="_on_first_thirty_five_button_pressed"]
+[connection signal="pressed" from="AllHiraganaButton" to="." method="_on_all_hiragana_button_pressed"]

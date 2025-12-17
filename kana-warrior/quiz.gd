@@ -1,18 +1,25 @@
 extends Control
 
-var hiragana := {
-	"あ": "a",
-	"い": "i",
-	"う": "u",
-	"え": "e",
-	"お": "o"
-}
+var hiragana := {}
 
 var correct_answer := ""
 var health := 3
 
+func load_background(path):
+	if path == "":
+		return
+	var tex: Texture2D = load(path)
+	$Background.texture = tex
+
 func _ready():
+	hiragana = Global.selected_kana_set
+	load_background(Global.selected_background)
 	randomize()
+	#avoid massive explosion
+	if hiragana.is_empty():
+		push_error("Kana set is empty! Did you forget to select a level?")
+		return
+	#ok go
 	new_question()
 	
 func new_question():
