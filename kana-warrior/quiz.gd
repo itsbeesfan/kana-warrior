@@ -57,6 +57,7 @@ func game_over():
 	$buttons/choice1.disabled = true
 	$buttons/choice2.disabled = true
 	$buttons/choice3.disabled = true
+	get_tree().change_scene_to_file("res://gameOver.tscn")
 
 func _on_choice_1_pressed() -> void:
 	check_answer($buttons/choice1.text)

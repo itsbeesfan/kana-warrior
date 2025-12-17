@@ -65,23 +65,19 @@ grow_horizontal = 2
 texture = ExtResource("2_ev681")
 expand_mode = 1
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
+[node name="Button" type="Button" parent="."]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.5
-anchor_top = 0.68200004
+anchor_top = 0.61300004
 anchor_right = 0.5
-anchor_bottom = 0.68200004
-offset_left = -145.75
-offset_top = -96.936035
-offset_right = 145.75
-offset_bottom = 97.063965
+anchor_bottom = 0.61300004
+offset_left = -179.375
+offset_top = 0.27597046
+offset_right = 179.375
+offset_bottom = 91.27597
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/separation = 8
-
-[node name="Button" type="Button" parent="VBoxContainer"]
-layout_mode = 2
 size_flags_vertical = 3
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
@@ -95,8 +91,17 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_ev681")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_3pj0e")
 text = "Start Game"
 
-[node name="Button2" type="Button" parent="VBoxContainer"]
-layout_mode = 2
+[node name="Button2" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.42200002
+anchor_top = 0.72400004
+anchor_right = 0.42200002
+anchor_bottom = 0.72400004
+offset_left = -89.14401
+offset_top = 31.847961
+offset_right = 88.85599
+offset_bottom = 73.84796
 size_flags_vertical = 3
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
@@ -110,8 +115,17 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_ev681")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_3pj0e")
 text = "Options"
 
-[node name="Button3" type="Button" parent="VBoxContainer"]
-layout_mode = 2
+[node name="Button3" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.58000004
+anchor_top = 0.72400004
+anchor_right = 0.58000004
+anchor_bottom = 0.72400004
+offset_left = -87.160034
+offset_top = 31.847961
+offset_right = 88.089966
+offset_bottom = 73.84796
 size_flags_vertical = 3
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
@@ -125,6 +139,6 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_ev681")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_3pj0e")
 text = "Exit"
 
-[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_start_pressed"]
-[connection signal="pressed" from="VBoxContainer/Button2" to="." method="_on_settings_pressed"]
-[connection signal="pressed" from="VBoxContainer/Button3" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="Button" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="Button3" to="." method="_on_exit_pressed"]

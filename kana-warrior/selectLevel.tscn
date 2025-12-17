@@ -7,3 +7,117 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+size_flags_horizontal = 4
+
+[node name="SelectLabel" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.043
+anchor_right = 0.5
+anchor_bottom = 0.043
+offset_left = -103.5
+offset_top = 0.13599968
+offset_right = 103.5
+offset_bottom = 45.136
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 32
+text = "LEVEL SELECT"
+
+[node name="FirstFiveButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.069000006
+anchor_top = 0.162
+anchor_right = 0.069000006
+anchor_bottom = 0.162
+offset_left = 0.5119934
+offset_top = 0.024002075
+offset_right = 288.38434
+offset_bottom = 164.024
+focus_mode = 0
+
+[node name="FirstFifteenButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.29000002
+anchor_right = 0.5
+anchor_bottom = 0.29000002
+offset_left = -144.0
+offset_top = -82.42001
+offset_right = 144.0
+offset_bottom = 82.57999
+grow_horizontal = 2
+grow_vertical = 2
+focus_mode = 0
+
+[node name="FirstTwentyFiveButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.93100005
+anchor_top = 0.162
+anchor_right = 0.93100005
+anchor_bottom = 0.162
+offset_left = -287.5121
+offset_top = 0.024002075
+offset_right = -0.51208496
+offset_bottom = 164.024
+focus_mode = 0
+
+[node name="FirstThirtyFiveButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.069000006
+anchor_top = 0.605
+anchor_right = 0.069000006
+anchor_bottom = 0.605
+offset_left = 0.5119934
+offset_top = -82.04001
+offset_right = 288.38434
+offset_bottom = 81.95999
+focus_mode = 0
+
+[node name="AllHiraganaButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.606
+anchor_right = 0.5
+anchor_bottom = 0.606
+offset_left = -144.0
+offset_top = -82.68802
+offset_right = 144.0
+offset_bottom = 82.31198
+grow_horizontal = 2
+grow_vertical = 2
+focus_mode = 0
+
+[node name="WIPButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.93100005
+anchor_top = 0.605
+anchor_right = 0.93100005
+anchor_bottom = 0.605
+offset_left = -287.5121
+offset_top = -82.04001
+offset_right = -0.51208496
+offset_bottom = 81.95999
+focus_mode = 0
+
+[node name="BackButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.86600006
+anchor_right = 0.5
+anchor_bottom = 0.86600006
+offset_left = -92.5
+offset_top = -31.16803
+offset_right = 92.5
+offset_bottom = 30.83197
+grow_horizontal = 2
+grow_vertical = 0
+focus_mode = 0
+text = "BACK"
