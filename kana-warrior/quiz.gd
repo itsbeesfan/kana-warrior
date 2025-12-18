@@ -1,5 +1,8 @@
 extends Control
 
+@onready var player = $Player
+@onready var sensei = $Sensei
+
 var hiragana := {}
 
 var correct_answer := ""
@@ -47,11 +50,30 @@ func new_question():
 func check_answer(choice: String):
 	if choice == correct_answer:
 		print("correcto!!!")
+		player_attack()
 	else:
 		print("incorrecto!")
-		damage()
+		sensei_attack()
 		
+func player_attack():
+	player.play_attack()
+	await get_tree().create_timer(0.2).timeout
+	sensei.take_damage()
+	await get_tree().create_timer(0.2).timeout
 	new_question()
+
+func sensei_attack():
+	sensei.play_attack()
+	await get_tree().create_timer(0.2).timeout
+	player.take_damage()
+	damage()
+	
+	if health <= 0:
+		return
+	
+	await get_tree().create_timer(0.2).timeout
+	new_question()
+	
 
 func damage():
 	health -= 1
