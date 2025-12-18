@@ -229,6 +229,7 @@ grow_vertical = 2
 script = ExtResource("1_kninm")
 
 [node name="Background" type="Sprite2D" parent="."]
+modulate = Color(0.796243, 0.796243, 0.796243, 1)
 texture_filter = 1
 position = Vector2(577.2222, 325)
 scale = Vector2(3.588889, 3.588889)
