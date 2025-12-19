@@ -2,6 +2,7 @@ extends Node
 
 var selected_kana_set = {}
 var selected_background = ""
+var selected_rounds := 10
 
 const HIRAGANA_5 = {
 	"あ":"a","い":"i","う":"u","え":"e","お":"o"

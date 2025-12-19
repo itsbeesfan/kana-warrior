@@ -8,6 +8,9 @@ var hiragana := {}
 var correct_answer := ""
 var health := 3
 
+var total_rounds := 10
+var current_rounds := 0
+
 func load_background(path):
 	if path == "":
 		return
@@ -17,13 +20,14 @@ func load_background(path):
 func _ready():
 	hiragana = Global.selected_kana_set
 	load_background(Global.selected_background)
+	total_rounds = Global.selected_rounds
 	randomize()
 	#avoid massive explosion
 	if hiragana.is_empty():
-		push_error("Kana set is empty! Did you forget to select a level?")
+		push_error("kana set is empty! did you forget to select a level?")
 		return
 	#ok go
-	new_question()
+	new_round()
 	
 func new_question():
 	var keys = Array(hiragana.keys())
@@ -47,6 +51,19 @@ func new_question():
 	$buttons/choice2.text = options[1]
 	$buttons/choice3.text = options[2]
 
+func new_round():
+	current_rounds += 1
+	
+	if current_rounds > total_rounds:
+		level_complete()
+		return
+		
+	new_question()
+
+func level_complete():
+	print("NIVEL COMPLETADOOOOAOAOAOOAOA")
+	get_tree().change_scene_to_file("res://LevelComplete.tscn")
+
 func check_answer(choice: String):
 	if choice == correct_answer:
 		print("correcto!!!")
@@ -60,7 +77,7 @@ func player_attack():
 	await get_tree().create_timer(0.2).timeout
 	sensei.take_damage()
 	await get_tree().create_timer(0.2).timeout
-	new_question()
+	new_round()
 
 func sensei_attack():
 	sensei.play_attack()
@@ -72,7 +89,7 @@ func sensei_attack():
 		return
 	
 	await get_tree().create_timer(0.2).timeout
-	new_question()
+	new_round()
 	
 
 func damage():
