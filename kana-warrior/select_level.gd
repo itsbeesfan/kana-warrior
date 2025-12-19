@@ -24,7 +24,9 @@ func _on_first_fifteen_button_pressed() -> void:
 
 
 func _on_first_twenty_five_button_pressed() -> void:
-	pass # Replace with function body.
+	Global.selected_kana_set = Global.HIRAGANA_25
+	Global.selected_background = "res://background-torii.png"
+	get_tree().change_scene_to_file("res://quiz.tscn")
 
 
 func _on_first_thirty_five_button_pressed() -> void:

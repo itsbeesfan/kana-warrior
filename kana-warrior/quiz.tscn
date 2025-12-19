@@ -300,7 +300,7 @@ script = ExtResource("3_p60ki")
 
 [node name="Sprite" type="AnimatedSprite2D" parent="Player"]
 texture_filter = 1
-position = Vector2(477, 432.00003)
+position = Vector2(477, 457.00003)
 scale = Vector2(5.25, 5.25)
 sprite_frames = SubResource("SpriteFrames_6tpgk")
 animation = &"idle"
@@ -310,7 +310,7 @@ script = ExtResource("6_4b0d1")
 
 [node name="Sprite" type="AnimatedSprite2D" parent="Sensei"]
 texture_filter = 1
-position = Vector2(636, 438)
+position = Vector2(636, 462.99997)
 scale = Vector2(5.25, 5.25)
 sprite_frames = SubResource("SpriteFrames_rayto")
 animation = &"attack"
