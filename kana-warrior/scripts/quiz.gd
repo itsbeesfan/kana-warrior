@@ -62,7 +62,7 @@ func new_round():
 
 func level_complete():
 	print("NIVEL COMPLETADOOOOAOAOAOOAOA")
-	get_tree().change_scene_to_file("res://LevelComplete.tscn")
+	get_tree().change_scene_to_file("res://scenes/LevelComplete.tscn")
 
 func check_answer(choice: String):
 	if choice == correct_answer:
@@ -103,7 +103,7 @@ func game_over():
 	$buttons/choice1.disabled = true
 	$buttons/choice2.disabled = true
 	$buttons/choice3.disabled = true
-	get_tree().change_scene_to_file("res://gameOver.tscn")
+	get_tree().change_scene_to_file("res://scenes/gameOver.tscn")
 
 func _on_choice_1_pressed() -> void:
 	check_answer($buttons/choice1.text)

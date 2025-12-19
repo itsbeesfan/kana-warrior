@@ -13,22 +13,22 @@ func _process(delta: float) -> void:
 
 func _on_first_five_button_pressed() -> void:
 	Global.selected_kana_set = Global.HIRAGANA_5
-	Global.selected_background = "res://background-dojo.png"
-	get_tree().change_scene_to_file("res://quiz.tscn")
+	Global.selected_background = "res://backgrounds/background-dojo.png"
+	get_tree().change_scene_to_file("res://scenes/quiz.tscn")
 	Global.selected_rounds = 5
 
 
 func _on_first_fifteen_button_pressed() -> void:
 	Global.selected_kana_set = Global.HIRAGANA_15
-	Global.selected_background = "res://background-forest.png"
-	get_tree().change_scene_to_file("res://quiz.tscn")
+	Global.selected_background = "res://backgrounds/background-forest.png"
+	get_tree().change_scene_to_file("res://scenes/quiz.tscn")
 	Global.selected_rounds = 10
 
 
 func _on_first_twenty_five_button_pressed() -> void:
 	Global.selected_kana_set = Global.HIRAGANA_25
-	Global.selected_background = "res://background-torii.png"
-	get_tree().change_scene_to_file("res://quiz.tscn")
+	Global.selected_background = "res://backgrounds/background-torii.png"
+	get_tree().change_scene_to_file("res://scenes/quiz.tscn")
 	Global.selected_rounds = 15
 
 

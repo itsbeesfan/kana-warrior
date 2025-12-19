@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://p2un5lnosf00"
-path="res://.godot/imported/background-forest.png-1500de4d6810b3746c147deffb48074c.ctex"
+uid="uid://bwoo0uebj4f7e"
+path="res://.godot/imported/samurai-1-idle-Sheet.png-829cbf5d8cab6414f777bba6d5d48b10.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://background-forest.png"
-dest_files=["res://.godot/imported/background-forest.png-1500de4d6810b3746c147deffb48074c.ctex"]
+source_file="res://sprites/samurai-1-idle-Sheet.png"
+dest_files=["res://.godot/imported/samurai-1-idle-Sheet.png-829cbf5d8cab6414f777bba6d5d48b10.ctex"]
 
 [params]
 

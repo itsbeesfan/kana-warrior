@@ -1,11 +1,11 @@
 [gd_scene load_steps=9 format=3 uid="uid://dou5sk06gbaqa"]
 
-[ext_resource type="Texture2D" uid="uid://c7nnbufssmhhr" path="res://background-dojo.png" id="1_3pj0e"]
-[ext_resource type="Script" uid="uid://d0dk5xm2a7n1s" path="res://start_screen.gd" id="1_ev681"]
-[ext_resource type="Texture2D" uid="uid://c7d4g5thmbwjj" path="res://images/godotwaka2.png" id="2_ev681"]
+[ext_resource type="Script" uid="uid://d0dk5xm2a7n1s" path="res://scripts/start_screen.gd" id="1_vn56n"]
+[ext_resource type="Texture2D" uid="uid://c7nnbufssmhhr" path="res://backgrounds/background-dojo.png" id="2_m73xm"]
+[ext_resource type="Texture2D" uid="uid://c7d4g5thmbwjj" path="res://images/godotwaka2.png" id="3_qnop8"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_w8rx1"]
-texture = ExtResource("1_3pj0e")
+texture = ExtResource("2_m73xm")
 modulate_color = Color(0.5132329, 0.5132329, 0.5132329, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vvkfh"]
@@ -38,7 +38,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_ev681")
+script = ExtResource("1_vn56n")
 
 [node name="Panel" type="Panel" parent="."]
 texture_filter = 1
@@ -62,7 +62,7 @@ offset_top = -345.88
 offset_right = 461.4961
 offset_bottom = 346.12
 grow_horizontal = 2
-texture = ExtResource("2_ev681")
+texture = ExtResource("3_qnop8")
 expand_mode = 1
 
 [node name="Button" type="Button" parent="."]

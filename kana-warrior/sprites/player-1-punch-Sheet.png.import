@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://xejxs3rg44xq"
-path="res://.godot/imported/samurai-swing-Sheet.png-b0277ee92514e029feb07daa214d47c0.ctex"
+uid="uid://0evigqwl5nf8"
+path="res://.godot/imported/player-1-punch-Sheet.png-11cad13f40614584f83b5abaf6b0f886.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://samurai-swing-Sheet.png"
-dest_files=["res://.godot/imported/samurai-swing-Sheet.png-b0277ee92514e029feb07daa214d47c0.ctex"]
+source_file="res://sprites/player-1-punch-Sheet.png"
+dest_files=["res://.godot/imported/player-1-punch-Sheet.png-11cad13f40614584f83b5abaf6b0f886.ctex"]
 
 [params]
 
