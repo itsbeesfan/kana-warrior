@@ -1,11 +1,11 @@
 [gd_scene load_steps=7 format=3 uid="uid://diri6chvmpdno"]
 
 [ext_resource type="Script" uid="uid://cnc2xrfodphdl" path="res://scripts/select_level.gd" id="1_yd4kl"]
-[ext_resource type="Script" uid="uid://bj833aujnn8bq" path="res://scenes/first_five_button.gd" id="2_c5rqm"]
-[ext_resource type="Script" uid="uid://batyrmpmqls8" path="res://scenes/first_fifteen_button.gd" id="3_mbmv6"]
-[ext_resource type="Script" uid="uid://n76633din8rm" path="res://scenes/first_twenty_five_button.gd" id="4_gb6kv"]
-[ext_resource type="Script" uid="uid://n07mtosujvwg" path="res://scenes/first_thirty_five_button.gd" id="5_trl3s"]
-[ext_resource type="Script" uid="uid://b65ln3hx5f1c4" path="res://scenes/all_hiragana_button.gd" id="6_u3vox"]
+[ext_resource type="Script" uid="uid://bj833aujnn8bq" path="res://scripts/first_five_button.gd" id="2_c5rqm"]
+[ext_resource type="Script" uid="uid://batyrmpmqls8" path="res://scripts/first_fifteen_button.gd" id="3_mbmv6"]
+[ext_resource type="Script" uid="uid://n76633din8rm" path="res://scripts/first_twenty_five_button.gd" id="4_gb6kv"]
+[ext_resource type="Script" uid="uid://n07mtosujvwg" path="res://scripts/first_thirty_five_button.gd" id="5_trl3s"]
+[ext_resource type="Script" uid="uid://b65ln3hx5f1c4" path="res://scripts/all_hiragana_button.gd" id="6_u3vox"]
 
 [node name="SelectLevel" type="Control"]
 layout_mode = 3
