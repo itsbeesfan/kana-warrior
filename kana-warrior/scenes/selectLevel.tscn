@@ -1,6 +1,11 @@
-[gd_scene load_steps=2 format=3 uid="uid://diri6chvmpdno"]
+[gd_scene load_steps=7 format=3 uid="uid://diri6chvmpdno"]
 
 [ext_resource type="Script" uid="uid://cnc2xrfodphdl" path="res://scripts/select_level.gd" id="1_yd4kl"]
+[ext_resource type="Script" uid="uid://bj833aujnn8bq" path="res://scenes/first_five_button.gd" id="2_c5rqm"]
+[ext_resource type="Script" uid="uid://batyrmpmqls8" path="res://scenes/first_fifteen_button.gd" id="3_mbmv6"]
+[ext_resource type="Script" uid="uid://n76633din8rm" path="res://scenes/first_twenty_five_button.gd" id="4_gb6kv"]
+[ext_resource type="Script" uid="uid://n07mtosujvwg" path="res://scenes/first_thirty_five_button.gd" id="5_trl3s"]
+[ext_resource type="Script" uid="uid://b65ln3hx5f1c4" path="res://scenes/all_hiragana_button.gd" id="6_u3vox"]
 
 [node name="SelectLevel" type="Control"]
 layout_mode = 3
@@ -27,88 +32,6 @@ grow_horizontal = 2
 theme_override_font_sizes/font_size = 32
 text = "LEVEL SELECT"
 
-[node name="FirstFiveButton" type="Button" parent="."]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.069000006
-anchor_top = 0.162
-anchor_right = 0.069000006
-anchor_bottom = 0.162
-offset_left = 0.5119934
-offset_top = 0.024002075
-offset_right = 288.38434
-offset_bottom = 164.024
-focus_mode = 0
-
-[node name="FirstFifteenButton" type="Button" parent="."]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.5
-anchor_top = 0.29000002
-anchor_right = 0.5
-anchor_bottom = 0.29000002
-offset_left = -144.0
-offset_top = -82.42001
-offset_right = 144.0
-offset_bottom = 82.57999
-grow_horizontal = 2
-grow_vertical = 2
-focus_mode = 0
-
-[node name="FirstTwentyFiveButton" type="Button" parent="."]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.93100005
-anchor_top = 0.162
-anchor_right = 0.93100005
-anchor_bottom = 0.162
-offset_left = -287.5121
-offset_top = 0.024002075
-offset_right = -0.51208496
-offset_bottom = 164.024
-focus_mode = 0
-
-[node name="FirstThirtyFiveButton" type="Button" parent="."]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.069000006
-anchor_top = 0.605
-anchor_right = 0.069000006
-anchor_bottom = 0.605
-offset_left = 0.5119934
-offset_top = -82.04001
-offset_right = 288.38434
-offset_bottom = 81.95999
-focus_mode = 0
-
-[node name="AllHiraganaButton" type="Button" parent="."]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.5
-anchor_top = 0.606
-anchor_right = 0.5
-anchor_bottom = 0.606
-offset_left = -144.0
-offset_top = -82.68802
-offset_right = 144.0
-offset_bottom = 82.31198
-grow_horizontal = 2
-grow_vertical = 2
-focus_mode = 0
-
-[node name="WIPButton" type="Button" parent="."]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.93100005
-anchor_top = 0.605
-anchor_right = 0.93100005
-anchor_bottom = 0.605
-offset_left = -287.5121
-offset_top = -82.04001
-offset_right = -0.51208496
-offset_bottom = 81.95999
-focus_mode = 0
-
 [node name="BackButton" type="Button" parent="."]
 layout_mode = 1
 anchors_preset = -1
@@ -125,8 +48,100 @@ grow_vertical = 0
 focus_mode = 0
 text = "BACK"
 
-[connection signal="pressed" from="FirstFiveButton" to="." method="_on_first_five_button_pressed"]
-[connection signal="pressed" from="FirstFifteenButton" to="." method="_on_first_fifteen_button_pressed"]
-[connection signal="pressed" from="FirstTwentyFiveButton" to="." method="_on_first_twenty_five_button_pressed"]
-[connection signal="pressed" from="FirstThirtyFiveButton" to="." method="_on_first_thirty_five_button_pressed"]
-[connection signal="pressed" from="AllHiraganaButton" to="." method="_on_all_hiragana_button_pressed"]
+[node name="Levels" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="FirstFiveButton" type="Button" parent="Levels" groups=["level_buttons"]]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.069000006
+anchor_top = 0.162
+anchor_right = 0.069000006
+anchor_bottom = 0.162
+offset_left = 77.24
+offset_top = 98.52
+offset_right = 365.11234
+offset_bottom = 262.52
+focus_mode = 0
+script = ExtResource("2_c5rqm")
+
+[node name="FirstFifteenButton" type="Button" parent="Levels" groups=["level_buttons"]]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.29000002
+anchor_right = 0.5
+anchor_bottom = 0.29000002
+offset_left = 412.0
+offset_top = 93.9
+offset_right = 700.0
+offset_bottom = 258.9
+grow_horizontal = 2
+grow_vertical = 2
+focus_mode = 0
+script = ExtResource("3_mbmv6")
+
+[node name="FirstTwentyFiveButton" type="Button" parent="Levels" groups=["level_buttons"]]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.93100005
+anchor_top = 0.162
+anchor_right = 0.93100005
+anchor_bottom = 0.162
+offset_left = 747.76
+offset_top = 98.52
+offset_right = 1034.76
+offset_bottom = 262.52
+focus_mode = 0
+script = ExtResource("4_gb6kv")
+
+[node name="FirstThirtyFiveButton" type="Button" parent="Levels" groups=["level_buttons"]]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.069000006
+anchor_top = 0.605
+anchor_right = 0.069000006
+anchor_bottom = 0.605
+offset_left = 77.24
+offset_top = 285.8
+offset_right = 365.11234
+offset_bottom = 449.8
+focus_mode = 0
+script = ExtResource("5_trl3s")
+
+[node name="AllHiraganaButton" type="Button" parent="Levels" groups=["level_buttons"]]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.606
+anchor_right = 0.5
+anchor_bottom = 0.606
+offset_left = 412.0
+offset_top = 285.76
+offset_right = 700.0
+offset_bottom = 450.76
+grow_horizontal = 2
+grow_vertical = 2
+focus_mode = 0
+script = ExtResource("6_u3vox")
+
+[node name="WIPButton" type="Button" parent="Levels"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.93100005
+anchor_top = 0.605
+anchor_right = 0.93100005
+anchor_bottom = 0.605
+offset_left = 747.76
+offset_top = 285.8
+offset_right = 1034.76
+offset_bottom = 449.8
+focus_mode = 0
+
+[connection signal="pressed" from="Levels/FirstFiveButton" to="." method="_on_first_five_button_pressed"]
+[connection signal="pressed" from="Levels/FirstFifteenButton" to="." method="_on_first_fifteen_button_pressed"]
+[connection signal="pressed" from="Levels/FirstTwentyFiveButton" to="." method="_on_first_twenty_five_button_pressed"]
+[connection signal="pressed" from="Levels/FirstThirtyFiveButton" to="." method="_on_first_thirty_five_button_pressed"]
+[connection signal="pressed" from="Levels/AllHiraganaButton" to="." method="_on_all_hiragana_button_pressed"]
