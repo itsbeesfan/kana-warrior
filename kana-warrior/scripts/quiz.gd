@@ -61,10 +61,10 @@ func new_round():
 	new_question()
 
 func level_complete():
-	var level = Global.selected_level
+	var next_level = Global.selected_level + 1
 	
-	if Global.unlocked_level < level + 1:
-		Global.unlocked_level = level + 1
+	if Global.unlocked_level < next_level:
+		Global.unlocked_level = next_level
 	
 	print("NIVEL COMPLETADOOOOAOAOAOOAOA")
 	get_tree().change_scene_to_file("res://scenes/LevelComplete.tscn")

@@ -5,6 +5,7 @@ var selected_background = ""
 var selected_rounds := 10
 var unlocked_level := 1
 var selected_level := 1
+var selected_player_data: PlayerData
 
 const HIRAGANA_5 = {
 	"あ":"a","い":"i","う":"u","え":"e","お":"o"

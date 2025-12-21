@@ -19,6 +19,8 @@ func _on_first_five_button_pressed() -> void:
 	Global.selected_background = "res://backgrounds/background-dojo.png"
 	get_tree().change_scene_to_file("res://scenes/quiz.tscn")
 	Global.selected_rounds = 5
+	Global.selected_player_data = preload("res://resources/player_level1.tres")
+	Global.selected_level = 1
 
 
 func _on_first_fifteen_button_pressed() -> void:
@@ -26,6 +28,8 @@ func _on_first_fifteen_button_pressed() -> void:
 	Global.selected_background = "res://backgrounds/background-forest.png"
 	get_tree().change_scene_to_file("res://scenes/quiz.tscn")
 	Global.selected_rounds = 10
+	Global.selected_player_data = preload("res://resources/player_level2.tres")
+	Global.selected_level = 2
 
 
 func _on_first_twenty_five_button_pressed() -> void:
@@ -33,6 +37,8 @@ func _on_first_twenty_five_button_pressed() -> void:
 	Global.selected_background = "res://backgrounds/background-torii.png"
 	get_tree().change_scene_to_file("res://scenes/quiz.tscn")
 	Global.selected_rounds = 15
+	Global.selected_player_data = preload("res://resources/player_level3.tres")
+	Global.selected_level = 3
 
 
 func _on_first_thirty_five_button_pressed() -> void:
