@@ -26,6 +26,7 @@ func _ready():
 	if hiragana.is_empty():
 		push_error("kana set is empty! did you forget to select a level?")
 		return
+	
 	#ok go
 	new_round()
 	
@@ -45,7 +46,6 @@ func new_question():
 			options.append(ans)
 	
 	options.shuffle()
-	
 	
 	$buttons/choice1.text = options[0]
 	$buttons/choice2.text = options[1]

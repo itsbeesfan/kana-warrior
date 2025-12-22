@@ -42,8 +42,16 @@ func _on_first_twenty_five_button_pressed() -> void:
 
 
 func _on_first_thirty_five_button_pressed() -> void:
-	pass # Replace with function body.
+	Global.selected_kana_set = Global.HIRAGANA_35
+	#Global.selected_background = "res://backgrounds/background-city.png"
+	get_tree().change_scene_to_file("res://scenes/quiz.tscn")
+	Global.selected_rounds = 20
+	Global.selected_level = 4
 
 
 func _on_all_hiragana_button_pressed() -> void:
-	pass # Replace with function body.
+	Global.selected_kana_set = Global.HIRAGANA_ALL
+	#Global.selected_background = "res://backgrounds/background-nose.png"
+	get_tree().change_scene_to_file("res://scenes/quiz.tscn")
+	Global.selected_rounds = 25
+	Global.selected_level = 5
