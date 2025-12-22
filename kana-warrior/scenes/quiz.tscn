@@ -305,6 +305,13 @@ scale = Vector2(5.25, 5.25)
 sprite_frames = SubResource("SpriteFrames_6tpgk")
 animation = &"idle"
 
+[node name="HealthBar" type="ProgressBar" parent="Player"]
+offset_left = 125.0
+offset_top = 612.0
+offset_right = 458.0
+offset_bottom = 639.0
+show_percentage = false
+
 [node name="Sensei" type="Node2D" parent="."]
 script = ExtResource("6_16nxq")
 
@@ -315,6 +322,14 @@ scale = Vector2(5.25, 5.25)
 sprite_frames = SubResource("SpriteFrames_rayto")
 animation = &"attack"
 
+[node name="HealthBar" type="ProgressBar" parent="Sensei"]
+offset_left = 693.0
+offset_top = 612.0
+offset_right = 1026.0
+offset_bottom = 639.0
+show_percentage = false
+
+[connection signal="player_damaged" from="." to="Player" method="_on_quiz_player_damaged"]
 [connection signal="pressed" from="buttons/choice1" to="." method="_on_choice_1_pressed"]
 [connection signal="pressed" from="buttons/choice2" to="." method="_on_choice_2_pressed"]
 [connection signal="pressed" from="buttons/choice3" to="." method="_on_choice_3_pressed"]

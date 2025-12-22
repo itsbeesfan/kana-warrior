@@ -14,6 +14,7 @@ var current_rounds := 0
 var original_kana: Array = []
 var remaining_kana: Array = []
 
+signal player_damaged(amount)
 
 func load_background(path):
 	if path == "":
@@ -100,6 +101,7 @@ func sensei_attack():
 	await get_tree().create_timer(0.2).timeout
 	player.take_damage()
 	damage()
+	emit_signal("player_damaged", 1)
 	
 	if health <= 0:
 		return
