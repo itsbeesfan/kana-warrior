@@ -11,6 +11,10 @@ var health := 3
 var total_rounds := 10
 var current_rounds := 0
 
+var original_kana: Array = []
+var remaining_kana: Array = []
+
+
 func load_background(path):
 	if path == "":
 		return
@@ -28,24 +32,31 @@ func _ready():
 		return
 	
 	#ok go
+	
+	original_kana = hiragana.keys().duplicate()
+	remaining_kana = original_kana.duplicate()
+	remaining_kana.shuffle()
+	
 	new_round()
 	
 func new_question():
-	var keys = Array(hiragana.keys())
-	var random_symbol = keys[randi() % keys.size()]
-	correct_answer = hiragana[random_symbol]
+	if remaining_kana.is_empty():
+		remaining_kana = original_kana.duplicate()
+		remaining_kana.shuffle()
+		
+	var symbol = remaining_kana.pop_back()
+	correct_answer = hiragana[symbol]
 	
-	$hiragana.text = random_symbol
-	var answers = Array(hiragana.values())
-	answers.shuffle()
-	
+	$hiragana.text = symbol
+
+	var answers = hiragana.values()
 	var options = [correct_answer]
 	
 	for ans in answers:
 		if ans != correct_answer and options.size() < 3:
 			options.append(ans)
 	
-	options.shuffle()
+			options.shuffle()
 	
 	$buttons/choice1.text = options[0]
 	$buttons/choice2.text = options[1]
