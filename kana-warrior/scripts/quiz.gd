@@ -38,6 +38,8 @@ func _ready():
 	remaining_kana = original_kana.duplicate()
 	remaining_kana.shuffle()
 	
+	
+	sensei.health_setup(total_rounds)
 	new_round()
 	
 func new_question():
