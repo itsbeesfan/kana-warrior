@@ -3,6 +3,10 @@ extends Control
 @onready var player = $Player
 @onready var sensei = $Sensei
 
+@onready var player_panel = $KanaPreview
+@onready var got_it_button = $KanaPreview/Button
+@onready var grid = $KanaPreview/GridContainer
+
 var hiragana := {}
 
 var correct_answer := ""
@@ -13,7 +17,6 @@ var current_rounds := 0
 
 var original_kana: Array = []
 var remaining_kana: Array = []
-
 signal player_damaged(amount)
 
 func load_background(path):
@@ -40,7 +43,24 @@ func _ready():
 	
 	
 	sensei.health_setup(total_rounds)
+	show_kana_preview(hiragana)
+	
+	# connect the info panel thing
+	player_panel.got_it_pressed.connect(_on_kana_preview_done)
+
+func _on_kana_preview_done():
+	player_panel.hide()
 	new_round()
+
+func show_kana_preview(kana_dict: Dictionary):
+	player_panel.show()
+	for child in grid.get_children():
+		child.queue_free()
+		
+	for symbol in kana_dict.keys():
+		var label := Label.new()
+		label.text = symbol + "  -  " + kana_dict[symbol]
+		grid.add_child(label)
 	
 func new_question():
 	if remaining_kana.is_empty():

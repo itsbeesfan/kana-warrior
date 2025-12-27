@@ -1,15 +1,8 @@
-[gd_scene format=3 uid="uid://dlgomokut75vv"]
+[gd_scene load_steps=2 format=3 uid="uid://dlgomokut75vv"]
 
-[node name="KanaPreview" type="Control"]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+[ext_resource type="Script" uid="uid://di4tnwf4qocj3" path="res://scenes/kana_preview.gd" id="1_1guvy"]
 
-[node name="Panel" type="Panel" parent="."]
-layout_mode = 1
+[node name="KanaPreview" type="Panel"]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -21,8 +14,9 @@ offset_right = 248.25
 offset_bottom = 183.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_1guvy")
 
-[node name="Label" type="Label" parent="Panel"]
+[node name="Label" type="Label" parent="."]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.5
@@ -35,5 +29,37 @@ offset_right = 152.5
 offset_bottom = 52.994
 grow_horizontal = 2
 theme_override_font_sizes/font_size = 28
-text = "kana for this level:"
+text = "new kana unlocked!!"
 horizontal_alignment = 1
+
+[node name="GridContainer" type="GridContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -215.99998
+offset_top = -120.5
+offset_right = 216.0
+offset_bottom = 105.0
+grow_horizontal = 2
+grow_vertical = 2
+columns = 2
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.89500004
+anchor_right = 0.5
+anchor_bottom = 0.89500004
+offset_left = -64.125
+offset_top = -22.570007
+offset_right = 64.125
+offset_bottom = 22.429993
+grow_horizontal = 2
+grow_vertical = 0
+text = "got it!"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

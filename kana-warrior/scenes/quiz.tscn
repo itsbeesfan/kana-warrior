@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=3 uid="uid://0g10r0q38tuq"]
+[gd_scene load_steps=39 format=3 uid="uid://0g10r0q38tuq"]
 
 [ext_resource type="Script" uid="uid://cw3c1rtetm36v" path="res://scripts/quiz.gd" id="1_bn6h1"]
 [ext_resource type="Texture2D" uid="uid://c7nnbufssmhhr" path="res://backgrounds/background-dojo.png" id="2_t0h63"]
@@ -8,6 +8,7 @@
 [ext_resource type="Script" uid="uid://bs4v4covptiyl" path="res://scripts/sensei.gd" id="6_16nxq"]
 [ext_resource type="Texture2D" uid="uid://xejxs3rg44xq" path="res://sprites/samurai-swing-Sheet.png" id="7_xcx78"]
 [ext_resource type="Texture2D" uid="uid://bwoo0uebj4f7e" path="res://sprites/samurai-1-idle-Sheet.png" id="8_kp58l"]
+[ext_resource type="PackedScene" uid="uid://dlgomokut75vv" path="res://scenes/kana_preview.tscn" id="9_t0h63"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_k7kv1"]
 
@@ -328,6 +329,9 @@ offset_top = 612.0
 offset_right = 1026.0
 offset_bottom = 639.0
 show_percentage = false
+
+[node name="KanaPreview" parent="." instance=ExtResource("9_t0h63")]
+layout_mode = 1
 
 [connection signal="player_damaged" from="." to="Player" method="_on_quiz_player_damaged"]
 [connection signal="pressed" from="buttons/choice1" to="." method="_on_choice_1_pressed"]
