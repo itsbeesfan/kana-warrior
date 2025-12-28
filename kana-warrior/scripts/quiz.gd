@@ -8,6 +8,9 @@ extends Control
 @onready var grid = $KanaPreview/GridContainer
 
 @onready var countdown = $Countdown
+
+@onready var black_fade = $BlackFade
+
 var hiragana := {}
 
 var correct_answer := ""
@@ -51,7 +54,18 @@ func _ready():
 
 func _on_kana_preview_done():
 	player_panel.hide()
+	await fade_in_level()
 	start_countdown()
+	
+func fade_in_level():
+	black_fade.visible = true
+	black_fade.modulate.a = 1.0
+	
+	var tween = get_tree().create_tween()
+	tween.tween_property(black_fade, "modulate:a", 0.0, 1.5)
+	await tween.finished
+	
+	black_fade.visible = false
 	
 func start_countdown():
 	countdown.show()
