@@ -1,8 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://dou5sk06gbaqa"]
+[gd_scene load_steps=10 format=3 uid="uid://dou5sk06gbaqa"]
 
 [ext_resource type="Script" uid="uid://d0dk5xm2a7n1s" path="res://scripts/start_screen.gd" id="1_vn56n"]
 [ext_resource type="Texture2D" uid="uid://c7nnbufssmhhr" path="res://backgrounds/background-dojo.png" id="2_m73xm"]
 [ext_resource type="Texture2D" uid="uid://c7d4g5thmbwjj" path="res://images/godotwaka2.png" id="3_qnop8"]
+[ext_resource type="FontFile" uid="uid://dks0mgfsw88e1" path="res://resources/fonts/BoldPixels.otf" id="4_m73xm"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_w8rx1"]
 texture = ExtResource("2_m73xm")
@@ -84,7 +85,8 @@ theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
 theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
 theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
 theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 30
+theme_override_fonts/font = ExtResource("4_m73xm")
+theme_override_font_sizes/font_size = 55
 theme_override_styles/normal = SubResource("StyleBoxFlat_vvkfh")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_3pj0e")
 theme_override_styles/hover = SubResource("StyleBoxFlat_ev681")
@@ -108,6 +110,7 @@ theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
 theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
 theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
 theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_m73xm")
 theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxFlat_vvkfh")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_3pj0e")
@@ -132,6 +135,7 @@ theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
 theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
 theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
 theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_m73xm")
 theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxFlat_vvkfh")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_3pj0e")
