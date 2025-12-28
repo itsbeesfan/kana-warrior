@@ -281,21 +281,6 @@ custom_minimum_size = Vector2(50, 0)
 layout_mode = 2
 theme_override_styles/focus = SubResource("StyleBoxEmpty_k7kv1")
 
-[node name="health" type="Label" parent="."]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.96300006
-anchor_top = 0.002
-anchor_right = 0.96300006
-anchor_bottom = 0.002
-offset_left = -192.3761
-offset_top = -0.296
-offset_right = -0.37609863
-offset_bottom = 33.704
-grow_horizontal = 0
-theme_override_font_sizes/font_size = 24
-text = "health: 3"
-
 [node name="Player" type="Node2D" parent="."]
 script = ExtResource("3_lcje5")
 

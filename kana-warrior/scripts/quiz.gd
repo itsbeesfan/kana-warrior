@@ -165,7 +165,6 @@ func sensei_attack():
 
 func damage():
 	health -= 1
-	$health.text = "health: " + str(health)
 	if health <= 0:
 		game_over()
 		
