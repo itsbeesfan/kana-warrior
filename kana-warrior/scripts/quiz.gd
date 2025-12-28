@@ -47,7 +47,7 @@ func _ready():
 	
 	
 	sensei.health_setup(total_rounds)
-	show_kana_preview(hiragana)
+	show_kana_preview(Global.new_kana)
 	
 	# connect the info panel thing
 	player_panel.got_it_pressed.connect(_on_kana_preview_done)
