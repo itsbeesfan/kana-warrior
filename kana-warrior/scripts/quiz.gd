@@ -7,6 +7,7 @@ extends Control
 @onready var got_it_button = $KanaPreview/Button
 @onready var grid = $KanaPreview/GridContainer
 
+@onready var countdown = $Countdown
 var hiragana := {}
 
 var correct_answer := ""
@@ -50,6 +51,22 @@ func _ready():
 
 func _on_kana_preview_done():
 	player_panel.hide()
+	start_countdown()
+	
+func start_countdown():
+	countdown.show()
+	countdown.text = "3"
+	await get_tree().create_timer(1.0).timeout
+	countdown.text = "2"
+	await get_tree().create_timer(1.0).timeout
+	countdown.text = "1"
+	await get_tree().create_timer(1.0).timeout
+	
+	countdown.text = "FIGHT!"
+	await get_tree().create_timer(0.75).timeout
+	
+	countdown.hide()
+	
 	new_round()
 
 func show_kana_preview(kana_dict: Dictionary):
