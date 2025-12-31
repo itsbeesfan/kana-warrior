@@ -23,6 +23,8 @@ var original_kana: Array = []
 var remaining_kana: Array = []
 signal player_damaged(amount)
 
+
+
 func load_background(path):
 	if path == "":
 		return
@@ -30,6 +32,7 @@ func load_background(path):
 	$Background.texture = tex
 
 func _ready():
+	sensei.defeated.connect(_on_sensei_defeated)
 	hiragana = Global.selected_kana_set
 	load_background(Global.selected_background)
 	total_rounds = Global.selected_rounds
@@ -51,6 +54,9 @@ func _ready():
 	
 	# connect the info panel thing
 	player_panel.got_it_pressed.connect(_on_kana_preview_done)
+
+func _on_sensei_defeated():
+	level_complete()
 
 func _on_kana_preview_done():
 	player_panel.hide()
@@ -118,11 +124,6 @@ func new_question():
 
 func new_round():
 	current_rounds += 1
-	
-	if current_rounds > total_rounds:
-		level_complete()
-		return
-		
 	new_question()
 
 func level_complete():

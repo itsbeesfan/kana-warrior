@@ -2,6 +2,7 @@ extends Node2D
 
 @onready var sprite := $Sprite
 @onready var health_bar := $HealthBar
+signal defeated
 
 var max_health := 1
 var current_health := 1
@@ -18,6 +19,9 @@ func take_damage(amount :=1):
 	sprite.modulate = Color(1, 1, 1)
 	current_health -= amount
 	health_bar.value = current_health
+	
+	if current_health <= 0:
+		emit_signal("defeated") 
 
 func health_setup(max_hp: int):
 	max_health = max_hp
