@@ -48,7 +48,7 @@ func _on_first_twenty_five_button_pressed() -> void:
 
 func _on_first_thirty_five_button_pressed() -> void:
 	Global.selected_kana_set = Global.HIRAGANA_35
-	#Global.selected_background = "res://backgrounds/background-city.png"
+	Global.selected_background = "res://backgrounds/background-city.png"
 	get_tree().change_scene_to_file("res://scenes/quiz.tscn")
 	Global.selected_rounds = 20
 	Global.selected_player_data = preload("res://resources/tres-files/player_level4.tres")
