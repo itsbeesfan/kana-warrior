@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" uid="uid://d0dk5xm2a7n1s" path="res://scripts/start_screen.gd" id="1_vn56n"]
 [ext_resource type="Texture2D" uid="uid://c7nnbufssmhhr" path="res://backgrounds/background-dojo.png" id="2_m73xm"]
-[ext_resource type="Texture2D" uid="uid://c7d4g5thmbwjj" path="res://images/godotwaka2.png" id="3_qnop8"]
 [ext_resource type="FontFile" uid="uid://dks0mgfsw88e1" path="res://resources/fonts/BoldPixels.otf" id="4_m73xm"]
+[ext_resource type="Texture2D" uid="uid://bgnq2pyslvvss" path="res://images/kana kenshin logo.png" id="4_qnop8"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_w8rx1"]
 texture = ExtResource("2_m73xm")
@@ -50,21 +50,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_w8rx1")
-
-[node name="TextureRect" type="TextureRect" parent="."]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.5
-anchor_top = 0.31
-anchor_right = 0.5
-anchor_bottom = 0.31
-offset_left = -461.4961
-offset_top = -345.88
-offset_right = 461.4961
-offset_bottom = 346.12
-grow_horizontal = 2
-texture = ExtResource("3_qnop8")
-expand_mode = 1
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 1
@@ -142,6 +127,22 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_3pj0e")
 theme_override_styles/hover = SubResource("StyleBoxFlat_ev681")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_3pj0e")
 text = "Exit"
+
+[node name="TextureRect" type="TextureRect" parent="."]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.38900003
+anchor_right = 0.5
+anchor_bottom = 0.38900003
+offset_left = -270.15848
+offset_top = -137.57202
+offset_right = 270.15845
+offset_bottom = 137.42798
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_qnop8")
 
 [connection signal="pressed" from="Button" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_settings_pressed"]
