@@ -1,7 +1,8 @@
-[gd_scene load_steps=39 format=3 uid="uid://0g10r0q38tuq"]
+[gd_scene load_steps=40 format=3 uid="uid://0g10r0q38tuq"]
 
 [ext_resource type="Script" uid="uid://cw3c1rtetm36v" path="res://scripts/quiz.gd" id="1_bn6h1"]
 [ext_resource type="Texture2D" uid="uid://c7nnbufssmhhr" path="res://backgrounds/background-dojo.png" id="2_t0h63"]
+[ext_resource type="Theme" uid="uid://c1g8xir7v6cmx" path="res://scenes/startScreen.tres" id="3_euwqo"]
 [ext_resource type="Script" uid="uid://b503ow8acjsdh" path="res://scripts/player.gd" id="3_lcje5"]
 [ext_resource type="Texture2D" uid="uid://0evigqwl5nf8" path="res://sprites/player-1-punch-Sheet.png" id="4_euwqo"]
 [ext_resource type="Texture2D" uid="uid://chedse1n5fo8c" path="res://sprites/player-1-idle-Sheet.png" id="5_vwwmd"]
@@ -266,18 +267,27 @@ grow_vertical = 0
 alignment = 1
 
 [node name="choice1" type="Button" parent="buttons"]
+texture_filter = 1
 custom_minimum_size = Vector2(50, 0)
 layout_mode = 2
+theme = ExtResource("3_euwqo")
+theme_override_font_sizes/font_size = 24
 theme_override_styles/focus = SubResource("StyleBoxEmpty_k7kv1")
 
 [node name="choice2" type="Button" parent="buttons"]
+texture_filter = 1
 custom_minimum_size = Vector2(50, 0)
 layout_mode = 2
+theme = ExtResource("3_euwqo")
+theme_override_font_sizes/font_size = 24
 theme_override_styles/focus = SubResource("StyleBoxEmpty_k7kv1")
 
 [node name="choice3" type="Button" parent="buttons"]
+texture_filter = 1
 custom_minimum_size = Vector2(50, 0)
 layout_mode = 2
+theme = ExtResource("3_euwqo")
+theme_override_font_sizes/font_size = 24
 theme_override_styles/focus = SubResource("StyleBoxEmpty_k7kv1")
 
 [node name="Player" type="Node2D" parent="."]
@@ -295,6 +305,7 @@ offset_left = 125.0
 offset_top = 612.0
 offset_right = 458.0
 offset_bottom = 639.0
+theme = ExtResource("3_euwqo")
 show_percentage = false
 
 [node name="Sensei" type="Node2D" parent="."]
@@ -312,11 +323,12 @@ offset_left = 693.0
 offset_top = 612.0
 offset_right = 1026.0
 offset_bottom = 639.0
+theme = ExtResource("3_euwqo")
 show_percentage = false
 
 [node name="KanaPreview" parent="." instance=ExtResource("9_t0h63")]
-visible = false
 layout_mode = 1
+theme = ExtResource("3_euwqo")
 
 [node name="Countdown" type="Label" parent="."]
 visible = false

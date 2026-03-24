@@ -1,6 +1,14 @@
-[gd_scene load_steps=2 format=3 uid="uid://dlgomokut75vv"]
+[gd_scene load_steps=5 format=3 uid="uid://dlgomokut75vv"]
 
 [ext_resource type="Script" uid="uid://di4tnwf4qocj3" path="res://scenes/kana_preview.gd" id="1_1guvy"]
+[ext_resource type="FontFile" uid="uid://d1ys2ane6ax25" path="res://resources/fonts/Pix32.ttf" id="1_jw71i"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ia7uf"]
+bg_color = Color(0.28545812, 0.25536612, 0.47525978, 1)
+
+[sub_resource type="Theme" id="Theme_cw8oc"]
+Button/fonts/font = ExtResource("1_jw71i")
+Panel/styles/panel = SubResource("StyleBoxFlat_ia7uf")
 
 [node name="KanaPreview" type="Panel"]
 anchors_preset = 8
@@ -14,9 +22,11 @@ offset_right = 248.25
 offset_bottom = 183.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = SubResource("Theme_cw8oc")
 script = ExtResource("1_1guvy")
 
 [node name="Label" type="Label" parent="."]
+texture_filter = 1
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.5
@@ -28,7 +38,8 @@ offset_top = -0.006000519
 offset_right = 152.5
 offset_bottom = 52.994
 grow_horizontal = 2
-theme_override_font_sizes/font_size = 28
+theme_override_fonts/font = ExtResource("1_jw71i")
+theme_override_font_sizes/font_size = 36
 text = "new kana unlocked!!"
 horizontal_alignment = 1
 
@@ -48,6 +59,7 @@ grow_vertical = 2
 columns = 2
 
 [node name="Button" type="Button" parent="."]
+texture_filter = 1
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.5
@@ -60,6 +72,7 @@ offset_right = 64.125
 offset_bottom = 22.429993
 grow_horizontal = 2
 grow_vertical = 0
+theme_override_font_sizes/font_size = 24
 text = "got it!"
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

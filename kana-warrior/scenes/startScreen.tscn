@@ -1,34 +1,13 @@
-[gd_scene load_steps=10 format=3 uid="uid://dou5sk06gbaqa"]
+[gd_scene load_steps=7 format=3 uid="uid://dou5sk06gbaqa"]
 
 [ext_resource type="Script" uid="uid://d0dk5xm2a7n1s" path="res://scripts/start_screen.gd" id="1_vn56n"]
 [ext_resource type="Texture2D" uid="uid://c7nnbufssmhhr" path="res://backgrounds/background-dojo.png" id="2_m73xm"]
-[ext_resource type="FontFile" uid="uid://dks0mgfsw88e1" path="res://resources/fonts/BoldPixels.otf" id="4_m73xm"]
+[ext_resource type="Theme" uid="uid://c1g8xir7v6cmx" path="res://scenes/startScreen.tres" id="3_qnop8"]
 [ext_resource type="Texture2D" uid="uid://bgnq2pyslvvss" path="res://images/kana kenshin logo.png" id="4_qnop8"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_w8rx1"]
 texture = ExtResource("2_m73xm")
 modulate_color = Color(0.41784823, 0.42838323, 0.5181978, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vvkfh"]
-bg_color = Color(1, 1, 1, 1)
-corner_radius_top_left = 8
-corner_radius_top_right = 8
-corner_radius_bottom_right = 8
-corner_radius_bottom_left = 8
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3pj0e"]
-bg_color = Color(0.646029, 0.646029, 0.646029, 1)
-corner_radius_top_left = 8
-corner_radius_top_right = 8
-corner_radius_bottom_right = 8
-corner_radius_bottom_left = 8
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ev681"]
-bg_color = Color(0.8217884, 0.8217888, 0.82178867, 1)
-corner_radius_top_left = 8
-corner_radius_top_right = 8
-corner_radius_bottom_right = 8
-corner_radius_bottom_left = 8
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3pj0e"]
 
@@ -52,6 +31,7 @@ grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_w8rx1")
 
 [node name="Button" type="Button" parent="."]
+texture_filter = 1
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.5
@@ -65,20 +45,16 @@ offset_bottom = 91.27597
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_vertical = 3
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
-theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
-theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
-theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("4_m73xm")
-theme_override_font_sizes/font_size = 55
-theme_override_styles/normal = SubResource("StyleBoxFlat_vvkfh")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_3pj0e")
-theme_override_styles/hover = SubResource("StyleBoxFlat_ev681")
+theme = ExtResource("3_qnop8")
+theme_override_colors/icon_normal_color = Color(0.2, 0.1764706, 0.34509805, 1)
+theme_override_colors/icon_pressed_color = Color(0.15790722, 0.13803533, 0.27971238, 1)
+theme_override_colors/icon_hover_color = Color(0.18252963, 0.16049573, 0.31802663, 1)
+theme_override_font_sizes/font_size = 60
 theme_override_styles/focus = SubResource("StyleBoxEmpty_3pj0e")
 text = "Start Game"
 
 [node name="Button2" type="Button" parent="."]
+texture_filter = 1
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.42200002
@@ -90,20 +66,12 @@ offset_top = 31.847961
 offset_right = 88.85599
 offset_bottom = 73.84796
 size_flags_vertical = 3
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
-theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
-theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
-theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("4_m73xm")
-theme_override_font_sizes/font_size = 30
-theme_override_styles/normal = SubResource("StyleBoxFlat_vvkfh")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_3pj0e")
-theme_override_styles/hover = SubResource("StyleBoxFlat_ev681")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_3pj0e")
-text = "Options"
+theme = ExtResource("3_qnop8")
+theme_override_font_sizes/font_size = 24
+text = "OPTIONS"
 
 [node name="Button3" type="Button" parent="."]
+texture_filter = 1
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.58000004
@@ -115,18 +83,9 @@ offset_top = 31.847961
 offset_right = 88.089966
 offset_bottom = 73.84796
 size_flags_vertical = 3
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
-theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
-theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
-theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("4_m73xm")
-theme_override_font_sizes/font_size = 30
-theme_override_styles/normal = SubResource("StyleBoxFlat_vvkfh")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_3pj0e")
-theme_override_styles/hover = SubResource("StyleBoxFlat_ev681")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_3pj0e")
-text = "Exit"
+theme = ExtResource("3_qnop8")
+theme_override_font_sizes/font_size = 24
+text = "EXIT"
 
 [node name="TextureRect" type="TextureRect" parent="."]
 texture_filter = 1
