@@ -179,7 +179,9 @@ offset_top = -164.0
 focus_mode = 0
 theme = ExtResource("4_dw240")
 theme_override_colors/font_color = Color(0.32941177, 0.33333334, 0.47843137, 1)
+theme_override_colors/font_disabled_color = Color(0.32941177, 0.33333334, 0.47843137, 1)
 theme_override_font_sizes/font_size = 24
+disabled = true
 text = "LEVEL 6 - WIP!"
 
 [connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]

@@ -118,9 +118,9 @@ func new_question():
 	
 			options.shuffle()
 	
-	$buttons/choice1.text = options[0]
-	$buttons/choice2.text = options[1]
-	$buttons/choice3.text = options[2]
+	$buttons/choice1.text = options[1]
+	$buttons/choice2.text = options[2]
+	$buttons/choice3.text = options[3]
 
 func new_round():
 	current_rounds += 1
