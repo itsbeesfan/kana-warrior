@@ -1,6 +1,13 @@
-[gd_scene load_steps=2 format=3 uid="uid://ctdx0qikq80xf"]
+[gd_scene load_steps=6 format=3 uid="uid://ctdx0qikq80xf"]
 
 [ext_resource type="Script" uid="uid://pgm1e52ye55t" path="res://scripts/options.gd" id="1_mhnwv"]
+[ext_resource type="Theme" uid="uid://c1g8xir7v6cmx" path="res://resources/startScreen.tres" id="2_gj583"]
+[ext_resource type="FontFile" uid="uid://d1ys2ane6ax25" path="res://resources/fonts/Pix32.ttf" id="2_mpfbj"]
+[ext_resource type="Texture2D" uid="uid://ddwvbwmlgvyak" path="res://backgrounds/background-city.png" id="2_w7akd"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hpwha"]
+texture = ExtResource("2_w7akd")
+modulate_color = Color(0.41784823, 0.42838323, 0.5181978, 1)
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -11,7 +18,18 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_mhnwv")
 
+[node name="Panel" type="Panel" parent="."]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_hpwha")
+
 [node name="Label" type="Label" parent="."]
+texture_filter = 1
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.5
@@ -23,10 +41,13 @@ offset_top = -11.640003
 offset_right = 54.0
 offset_bottom = 11.359997
 grow_horizontal = 2
-theme_override_font_sizes/font_size = 24
-text = "options menu"
+theme_override_fonts/font = ExtResource("2_mpfbj")
+theme_override_font_sizes/font_size = 48
+text = "OPTIONS MENU"
+horizontal_alignment = 1
 
 [node name="Button" type="Button" parent="."]
+texture_filter = 1
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.5
@@ -39,7 +60,8 @@ offset_right = 82.75
 offset_bottom = 32.799988
 grow_horizontal = 2
 grow_vertical = 0
-theme_override_font_sizes/font_size = 20
-text = "back"
+theme = ExtResource("2_gj583")
+theme_override_font_sizes/font_size = 36
+text = "BACK"
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
