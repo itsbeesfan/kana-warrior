@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://dlgomokut75vv"]
+[gd_scene load_steps=6 format=3 uid="uid://dlgomokut75vv"]
 
-[ext_resource type="Script" uid="uid://di4tnwf4qocj3" path="res://scenes/kana_preview.gd" id="1_1guvy"]
+[ext_resource type="Script" uid="uid://di4tnwf4qocj3" path="res://scripts/kana_preview.gd" id="1_1guvy"]
 [ext_resource type="FontFile" uid="uid://d1ys2ane6ax25" path="res://resources/fonts/Pix32.ttf" id="1_jw71i"]
+[ext_resource type="Theme" uid="uid://c1g8xir7v6cmx" path="res://resources/startScreen.tres" id="3_ia7uf"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ia7uf"]
 bg_color = Color(0.28545812, 0.25536612, 0.47525978, 1)
@@ -45,17 +46,16 @@ horizontal_alignment = 1
 
 [node name="GridContainer" type="GridContainer" parent="."]
 layout_mode = 1
-anchors_preset = 8
+anchors_preset = -1
 anchor_left = 0.5
-anchor_top = 0.5
+anchor_top = 0.58500004
 anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -215.99998
-offset_top = -120.5
-offset_right = 216.0
-offset_bottom = 105.0
+anchor_bottom = 0.58500004
+offset_top = -0.11001587
+offset_bottom = -0.11001587
 grow_horizontal = 2
-grow_vertical = 2
+grow_vertical = 0
+theme = ExtResource("3_ia7uf")
 columns = 2
 
 [node name="Button" type="Button" parent="."]

@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://ddwvbwmlgvyak" path="res://backgrounds/background-city.png" id="2_trl3s"]
 [ext_resource type="Script" uid="uid://batyrmpmqls8" path="res://scripts/first_fifteen_button.gd" id="3_mbmv6"]
 [ext_resource type="FontFile" uid="uid://d1ys2ane6ax25" path="res://resources/fonts/Pix32.ttf" id="3_u3vox"]
-[ext_resource type="Theme" uid="uid://c1g8xir7v6cmx" path="res://scenes/startScreen.tres" id="4_dw240"]
+[ext_resource type="Theme" uid="uid://c1g8xir7v6cmx" path="res://resources/startScreen.tres" id="4_dw240"]
 [ext_resource type="Script" uid="uid://n76633din8rm" path="res://scripts/first_twenty_five_button.gd" id="4_gb6kv"]
 [ext_resource type="Script" uid="uid://n07mtosujvwg" path="res://scripts/first_thirty_five_button.gd" id="5_trl3s"]
 [ext_resource type="Script" uid="uid://b65ln3hx5f1c4" path="res://scripts/all_hiragana_button.gd" id="6_u3vox"]
@@ -88,6 +88,7 @@ anchor_bottom = 2.6250002
 offset_right = 287.87234
 offset_bottom = 164.0
 focus_mode = 0
+theme = ExtResource("4_dw240")
 script = ExtResource("2_c5rqm")
 
 [node name="FirstFifteenButton" type="Button" parent="Levels" groups=["level_buttons"]]
@@ -104,6 +105,7 @@ offset_bottom = 165.01999
 grow_horizontal = 2
 grow_vertical = 2
 focus_mode = 0
+theme = ExtResource("4_dw240")
 script = ExtResource("3_mbmv6")
 
 [node name="FirstTwentyFiveButton" type="Button" parent="Levels" groups=["level_buttons"]]
@@ -116,6 +118,7 @@ anchor_bottom = 2.6250002
 offset_left = -287.0
 offset_bottom = 164.0
 focus_mode = 0
+theme = ExtResource("4_dw240")
 script = ExtResource("4_gb6kv")
 
 [node name="FirstThirtyFiveButton" type="Button" parent="Levels" groups=["level_buttons"]]
@@ -128,6 +131,7 @@ anchor_bottom = 11.85
 offset_top = -164.0
 offset_right = 287.87234
 focus_mode = 0
+theme = ExtResource("4_dw240")
 script = ExtResource("5_trl3s")
 
 [node name="AllHiraganaButton" type="Button" parent="Levels" groups=["level_buttons"]]
@@ -144,6 +148,7 @@ offset_bottom = -3.0517578e-05
 grow_horizontal = 2
 grow_vertical = 2
 focus_mode = 0
+theme = ExtResource("4_dw240")
 script = ExtResource("6_u3vox")
 
 [node name="WIPButton" type="Button" parent="Levels"]
@@ -156,6 +161,7 @@ anchor_bottom = 11.85
 offset_left = -287.0
 offset_top = -164.0
 focus_mode = 0
+theme = ExtResource("4_dw240")
 
 [connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]
 [connection signal="pressed" from="Levels/FirstFiveButton" to="." method="_on_first_five_button_pressed"]

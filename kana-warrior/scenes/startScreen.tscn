@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://dou5sk06gbaqa"]
+[gd_scene load_steps=8 format=3 uid="uid://dou5sk06gbaqa"]
 
 [ext_resource type="Script" uid="uid://d0dk5xm2a7n1s" path="res://scripts/start_screen.gd" id="1_vn56n"]
 [ext_resource type="Texture2D" uid="uid://c7nnbufssmhhr" path="res://backgrounds/background-dojo.png" id="2_m73xm"]
-[ext_resource type="Theme" uid="uid://c1g8xir7v6cmx" path="res://scenes/startScreen.tres" id="3_qnop8"]
+[ext_resource type="Theme" uid="uid://c1g8xir7v6cmx" path="res://resources/startScreen.tres" id="3_qnop8"]
+[ext_resource type="FontFile" uid="uid://dks0mgfsw88e1" path="res://resources/fonts/BoldPixels.otf" id="4_dclkl"]
 [ext_resource type="Texture2D" uid="uid://bgnq2pyslvvss" path="res://images/kana kenshin logo.png" id="4_qnop8"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_w8rx1"]
@@ -67,7 +68,8 @@ offset_right = 88.85599
 offset_bottom = 73.84796
 size_flags_vertical = 3
 theme = ExtResource("3_qnop8")
-theme_override_font_sizes/font_size = 24
+theme_override_fonts/font = ExtResource("4_dclkl")
+theme_override_font_sizes/font_size = 32
 text = "OPTIONS"
 
 [node name="Button3" type="Button" parent="."]
@@ -84,7 +86,8 @@ offset_right = 88.089966
 offset_bottom = 73.84796
 size_flags_vertical = 3
 theme = ExtResource("3_qnop8")
-theme_override_font_sizes/font_size = 24
+theme_override_fonts/font = ExtResource("4_dclkl")
+theme_override_font_sizes/font_size = 32
 text = "EXIT"
 
 [node name="TextureRect" type="TextureRect" parent="."]
