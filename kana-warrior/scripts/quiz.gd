@@ -72,7 +72,14 @@ func fade_in_level():
 	await tween.finished
 	
 	black_fade.visible = false
-	
+
+func fade_out_level():
+	black_fade.visible = true
+	black_fade.modulate.a = 0.0
+	var tween = get_tree().create_tween()
+	tween.tween_property(black_fade, "modulate:a", 1.0, 1.0)
+	await tween.finished
+
 func start_countdown():
 	countdown.show()
 	countdown.text = "3"
@@ -138,6 +145,7 @@ func level_complete():
 		Global.unlocked_level = next_level
 	
 	print("NIVEL COMPLETADOOOOAOAOAOOAOA")
+	await fade_out_level()
 	get_tree().change_scene_to_file("res://scenes/LevelComplete.tscn")
 
 func check_answer(choice: String):
