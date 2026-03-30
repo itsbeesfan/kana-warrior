@@ -46,6 +46,25 @@ theme_override_font_sizes/font_size = 48
 text = "OPTIONS MENU"
 horizontal_alignment = 1
 
+[node name="Label2" type="Label" parent="."]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.822
+anchor_right = 0.5
+anchor_bottom = 0.822
+offset_left = -141.5
+offset_top = -11.656006
+offset_right = 141.5
+offset_bottom = 11.343994
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("2_mpfbj")
+theme_override_font_sizes/font_size = 12
+text = "made by tatiana morales / @beesfan"
+horizontal_alignment = 1
+
 [node name="Button" type="Button" parent="."]
 texture_filter = 1
 layout_mode = 1

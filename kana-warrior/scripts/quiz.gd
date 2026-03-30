@@ -108,19 +108,24 @@ func new_question():
 	correct_answer = hiragana[symbol]
 	
 	$hiragana.text = symbol
-
-	var answers = hiragana.values()
-	var options = [correct_answer]
 	
-	for ans in answers:
-		if ans != correct_answer and options.size() < 3:
-			options.append(ans)
+	## time to fix the shuffling
+	var wrong_answers: Array = []
+	for ans in hiragana.values():
+		if ans != correct_answer:
+			wrong_answers.append(ans)
 	
-			options.shuffle()
+	wrong_answers.shuffle()
 	
-	$buttons/choice1.text = options[1]
-	$buttons/choice2.text = options[2]
-	$buttons/choice3.text = options[3]
+	var options: Array = [correct_answer]
+	options.append(wrong_answers[0])
+	options.append(wrong_answers[1])
+	
+	options.shuffle()
+	
+	$buttons/choice1.text = options[0]
+	$buttons/choice2.text = options[1]
+	$buttons/choice3.text = options[2]
 
 func new_round():
 	current_rounds += 1
