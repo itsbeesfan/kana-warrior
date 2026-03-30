@@ -187,6 +187,8 @@ func game_over():
 	$buttons/choice1.disabled = true
 	$buttons/choice2.disabled = true
 	$buttons/choice3.disabled = true
+	
+	await fade_out_level()
 	get_tree().change_scene_to_file("res://scenes/gameOver.tscn")
 
 func _on_choice_1_pressed() -> void:
