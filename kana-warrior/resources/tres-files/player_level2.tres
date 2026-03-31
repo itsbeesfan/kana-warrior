@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="PlayerData" format=3 uid="uid://cunylovhu4t2x"]
+[gd_resource type="Resource" script_class="PlayerData" load_steps=23 format=3 uid="uid://cunylovhu4t2x"]
 
 [ext_resource type="Script" uid="uid://djsq1knt5gkw5" path="res://scripts/player_data.gd" id="1_4eu61"]
 [ext_resource type="Texture2D" uid="uid://dydcesse8v5ur" path="res://sprites/player-2-swing-Sheet.png" id="1_cj0b0"]

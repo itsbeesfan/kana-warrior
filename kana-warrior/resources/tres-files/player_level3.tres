@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="PlayerData" format=3 uid="uid://cpob7wqu1d4hn"]
+[gd_resource type="Resource" script_class="PlayerData" load_steps=19 format=3 uid="uid://cpob7wqu1d4hn"]
 
 [ext_resource type="Texture2D" uid="uid://b7r3rq7oemg1p" path="res://sprites/ninja-1-swing-Sheet.png" id="1_l1qb2"]
 [ext_resource type="Script" uid="uid://djsq1knt5gkw5" path="res://scripts/player_data.gd" id="1_uwm5r"]
