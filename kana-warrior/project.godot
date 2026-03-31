@@ -27,6 +27,7 @@ buses/default_bus_layout="uid://4kt4lattpnux"
 
 Global="*res://scripts/Global.gd"
 MusicStuff="*uid://b0f67xlhwyb1d"
+SfxStuff="*uid://bo6s2mm0wja1a"
 
 [display]
 

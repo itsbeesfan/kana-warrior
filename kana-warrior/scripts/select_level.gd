@@ -15,6 +15,7 @@ func _process(delta: float) -> void:
 
 
 func _on_first_five_button_pressed() -> void:
+	SfxStuff.play_hit()
 	Global.selected_kana_set = Global.HIRAGANA_5
 	Global.selected_background = "res://backgrounds/background-dojo.png"
 	get_tree().change_scene_to_file("res://scenes/quiz.tscn")
@@ -25,6 +26,7 @@ func _on_first_five_button_pressed() -> void:
 
 
 func _on_first_fifteen_button_pressed() -> void:
+	SfxStuff.play_hit()
 	Global.selected_kana_set = Global.HIRAGANA_15
 	Global.selected_background = "res://backgrounds/background-forest.png"
 	get_tree().change_scene_to_file("res://scenes/quiz.tscn")
@@ -36,6 +38,7 @@ func _on_first_fifteen_button_pressed() -> void:
 
 
 func _on_first_twenty_five_button_pressed() -> void:
+	SfxStuff.play_hit()
 	Global.selected_kana_set = Global.HIRAGANA_25
 	Global.selected_background = "res://backgrounds/background-torii.png"
 	get_tree().change_scene_to_file("res://scenes/quiz.tscn")
@@ -47,6 +50,7 @@ func _on_first_twenty_five_button_pressed() -> void:
 
 
 func _on_first_thirty_five_button_pressed() -> void:
+	SfxStuff.play_hit()
 	Global.selected_kana_set = Global.HIRAGANA_35
 	Global.selected_background = "res://backgrounds/background-city.png"
 	get_tree().change_scene_to_file("res://scenes/quiz.tscn")
@@ -58,6 +62,7 @@ func _on_first_thirty_five_button_pressed() -> void:
 
 
 func _on_all_hiragana_button_pressed() -> void:
+	SfxStuff.play_hit()
 	Global.selected_kana_set = Global.HIRAGANA_ALL
 	#Global.selected_background = "res://backgrounds/background-nose.png"
 	get_tree().change_scene_to_file("res://scenes/quiz.tscn")
@@ -70,4 +75,5 @@ func _on_all_hiragana_button_pressed() -> void:
 
 
 func _on_back_button_pressed() -> void:
+	SfxStuff.play_button()
 	get_tree().change_scene_to_file("res://scenes/startScreen.tscn")

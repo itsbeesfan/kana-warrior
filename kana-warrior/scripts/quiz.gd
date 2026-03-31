@@ -11,6 +11,8 @@ extends Control
 
 @onready var black_fade = $BlackFade
 
+
+
 var hiragana := {}
 
 var correct_answer := ""
@@ -81,6 +83,7 @@ func fade_out_level():
 	await tween.finished
 
 func start_countdown():
+	SfxStuff.play_countdown()
 	countdown.show()
 	countdown.text = "3"
 	await get_tree().create_timer(1.0).timeout
@@ -145,6 +148,7 @@ func level_complete():
 		Global.unlocked_level = next_level
 	
 	print("NIVEL COMPLETADOOOOAOAOAOOAOA")
+	SfxStuff.play_whoosh()
 	await fade_out_level()
 	get_tree().change_scene_to_file("res://scenes/LevelComplete.tscn")
 
@@ -158,6 +162,7 @@ func check_answer(choice: String):
 		
 func player_attack():
 	player.play_attack()
+	SfxStuff.play_hit()
 	await get_tree().create_timer(0.2).timeout
 	sensei.take_damage()
 	await get_tree().create_timer(0.2).timeout
@@ -165,6 +170,7 @@ func player_attack():
 
 func sensei_attack():
 	sensei.play_attack()
+	SfxStuff.play_hit()
 	await get_tree().create_timer(0.2).timeout
 	player.take_damage()
 	damage()
@@ -187,14 +193,16 @@ func game_over():
 	$buttons/choice1.disabled = true
 	$buttons/choice2.disabled = true
 	$buttons/choice3.disabled = true
-	
+	SfxStuff.play_whoosh()
 	await fade_out_level()
 	get_tree().change_scene_to_file("res://scenes/gameOver.tscn")
 
 func _on_choice_1_pressed() -> void:
+	SfxStuff.play_button()
 	check_answer($buttons/choice1.text)
 func _on_choice_2_pressed() -> void:
+	SfxStuff.play_button()
 	check_answer($buttons/choice2.text)
-
 func _on_choice_3_pressed() -> void:
+	SfxStuff.play_button()
 	check_answer($buttons/choice3.text)

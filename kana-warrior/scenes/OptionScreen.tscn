@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://ddwvbwmlgvyak" path="res://backgrounds/background-city.png" id="2_w7akd"]
 [ext_resource type="FontFile" uid="uid://dks0mgfsw88e1" path="res://resources/fonts/BoldPixels.otf" id="5_hpwha"]
 [ext_resource type="Script" uid="uid://bdxddwwljljkq" path="res://scenes/music_slider.gd" id="6_j5auf"]
+[ext_resource type="Script" uid="uid://be01jjke5178h" path="res://scenes/sfx_slider.gd" id="7_wnsas"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hpwha"]
 texture = ExtResource("2_w7akd")
@@ -126,7 +127,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/grabber_area = SubResource("StyleBoxFlat_j5auf")
 max_value = 15.0
-step = 0.02
+step = 0.2
 value = 5.0
 script = ExtResource("6_j5auf")
 audio_bus_name = "music"
@@ -163,7 +164,11 @@ offset_bottom = 7.8239746
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/grabber_area = SubResource("StyleBoxFlat_hpwha")
-value = 40.0
+max_value = 20.0
+step = 0.2
+value = 20.0
+script = ExtResource("7_wnsas")
+audio_bus_name = "sfx"
 
 [node name="sfx" type="Label" parent="sfxSlider" unique_id=1423220716]
 texture_filter = 1
@@ -185,3 +190,4 @@ text = "SFX"
 
 [connection signal="pressed" from="backButton" to="." method="_on_button_pressed"]
 [connection signal="value_changed" from="musicSlider" to="musicSlider" method="_on_value_changed"]
+[connection signal="value_changed" from="sfxSlider" to="sfxSlider" method="_on_value_changed"]
