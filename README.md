@@ -44,3 +44,10 @@ i'll keep updating on this since i still need to learn katakana haha
 
 thanks to reem, the athena initiative, sleepover, milkyway, tongyu, and literally everyone else for encouraging me to make/finish
 this game!! y'all inspire me so much :)
+
+ALSO SORRY IF I OFFENDED ANY JAPANESE PEOPLE IT'S NOT MY INTENTION!!
+
+
+<img width="1840" height="1031" alt="image" src="https://github.com/user-attachments/assets/47768889-6897-46ae-990b-d25a8171b8b8" />
+<img width="1839" height="1039" alt="image" src="https://github.com/user-attachments/assets/bb618d11-a07d-42f2-a9f8-47766a331292" />
+<img width="1842" height="1040" alt="image" src="https://github.com/user-attachments/assets/ae194918-8e4b-478f-85b4-1542cd7671cf" />
