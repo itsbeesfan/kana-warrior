@@ -1,8 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://dlgomokut75vv"]
+[gd_scene format=3 uid="uid://dlgomokut75vv"]
 
 [ext_resource type="Script" uid="uid://di4tnwf4qocj3" path="res://scripts/kana_preview.gd" id="1_1guvy"]
 [ext_resource type="FontFile" uid="uid://d1ys2ane6ax25" path="res://resources/fonts/Pix32.ttf" id="1_jw71i"]
-[ext_resource type="Theme" uid="uid://c1g8xir7v6cmx" path="res://resources/startScreen.tres" id="3_ia7uf"]
+[ext_resource type="Theme" uid="uid://c1g8xir7v6cmx" path="res://resources/tres-files/startScreen.tres" id="3_ia7uf"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ia7uf"]
 bg_color = Color(0.28545812, 0.25536612, 0.47525978, 1)
@@ -11,7 +11,7 @@ bg_color = Color(0.28545812, 0.25536612, 0.47525978, 1)
 Button/fonts/font = ExtResource("1_jw71i")
 Panel/styles/panel = SubResource("StyleBoxFlat_ia7uf")
 
-[node name="KanaPreview" type="Panel"]
+[node name="KanaPreview" type="Panel" unique_id=1529595377]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -26,7 +26,7 @@ grow_vertical = 2
 theme = SubResource("Theme_cw8oc")
 script = ExtResource("1_1guvy")
 
-[node name="Label" type="Label" parent="."]
+[node name="Label" type="Label" parent="." unique_id=484587312]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = -1
@@ -44,7 +44,7 @@ theme_override_font_sizes/font_size = 36
 text = "new kana unlocked!!"
 horizontal_alignment = 1
 
-[node name="GridContainer" type="GridContainer" parent="."]
+[node name="GridContainer" type="GridContainer" parent="." unique_id=804396219]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.5
@@ -58,7 +58,7 @@ grow_vertical = 0
 theme = ExtResource("3_ia7uf")
 columns = 2
 
-[node name="Button" type="Button" parent="."]
+[node name="Button" type="Button" parent="." unique_id=1412917451]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = -1

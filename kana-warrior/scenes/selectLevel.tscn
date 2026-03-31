@@ -1,11 +1,11 @@
-[gd_scene load_steps=12 format=3 uid="uid://diri6chvmpdno"]
+[gd_scene format=3 uid="uid://diri6chvmpdno"]
 
 [ext_resource type="Script" uid="uid://cnc2xrfodphdl" path="res://scripts/select_level.gd" id="1_yd4kl"]
 [ext_resource type="Script" uid="uid://bj833aujnn8bq" path="res://scripts/first_five_button.gd" id="2_c5rqm"]
 [ext_resource type="Texture2D" uid="uid://ddwvbwmlgvyak" path="res://backgrounds/background-city.png" id="2_trl3s"]
 [ext_resource type="Script" uid="uid://batyrmpmqls8" path="res://scripts/first_fifteen_button.gd" id="3_mbmv6"]
 [ext_resource type="FontFile" uid="uid://d1ys2ane6ax25" path="res://resources/fonts/Pix32.ttf" id="3_u3vox"]
-[ext_resource type="Theme" uid="uid://c1g8xir7v6cmx" path="res://resources/startScreen.tres" id="4_dw240"]
+[ext_resource type="Theme" uid="uid://c1g8xir7v6cmx" path="res://resources/tres-files/startScreen.tres" id="4_dw240"]
 [ext_resource type="Script" uid="uid://n76633din8rm" path="res://scripts/first_twenty_five_button.gd" id="4_gb6kv"]
 [ext_resource type="Script" uid="uid://n07mtosujvwg" path="res://scripts/first_thirty_five_button.gd" id="5_trl3s"]
 [ext_resource type="Script" uid="uid://b65ln3hx5f1c4" path="res://scripts/all_hiragana_button.gd" id="6_u3vox"]
@@ -16,7 +16,7 @@ modulate_color = Color(0.41784823, 0.42838323, 0.5181978, 1)
 
 [sub_resource type="Theme" id="Theme_to3w4"]
 
-[node name="SelectLevel" type="Control"]
+[node name="SelectLevel" type="Control" unique_id=1561947509]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -26,7 +26,7 @@ grow_vertical = 2
 size_flags_horizontal = 4
 script = ExtResource("1_yd4kl")
 
-[node name="Panel" type="Panel" parent="."]
+[node name="Panel" type="Panel" parent="." unique_id=1664398448]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = 15
@@ -36,7 +36,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_b2g1k")
 
-[node name="SelectLabel" type="Label" parent="."]
+[node name="SelectLabel" type="Label" parent="." unique_id=1545325707]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = -1
@@ -54,7 +54,7 @@ theme_override_fonts/font = ExtResource("3_u3vox")
 theme_override_font_sizes/font_size = 48
 text = "LEVEL SELECT"
 
-[node name="BackButton" type="Button" parent="."]
+[node name="BackButton" type="Button" parent="." unique_id=527062236]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = -1
@@ -73,12 +73,12 @@ theme = ExtResource("4_dw240")
 theme_override_font_sizes/font_size = 36
 text = "BACK"
 
-[node name="Levels" type="Control" parent="."]
+[node name="Levels" type="Control" parent="." unique_id=404651494]
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="FirstFiveButton" type="Button" parent="Levels" groups=["level_buttons"]]
+[node name="FirstFiveButton" type="Button" parent="Levels" unique_id=1543000640 groups=["level_buttons"]]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = -1
@@ -94,7 +94,7 @@ theme_override_font_sizes/font_size = 24
 text = "LEVEL 1 - PLAY!"
 script = ExtResource("2_c5rqm")
 
-[node name="FirstFifteenButton" type="Button" parent="Levels" groups=["level_buttons"]]
+[node name="FirstFifteenButton" type="Button" parent="Levels" unique_id=1849478886 groups=["level_buttons"]]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = -1
@@ -114,7 +114,7 @@ theme_override_font_sizes/font_size = 24
 text = "LEVEL 2 - PLAY!"
 script = ExtResource("3_mbmv6")
 
-[node name="FirstTwentyFiveButton" type="Button" parent="Levels" groups=["level_buttons"]]
+[node name="FirstTwentyFiveButton" type="Button" parent="Levels" unique_id=1928339536 groups=["level_buttons"]]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = -1
@@ -130,7 +130,7 @@ theme_override_font_sizes/font_size = 24
 text = "LEVEL 3 - PLAY"
 script = ExtResource("4_gb6kv")
 
-[node name="FirstThirtyFiveButton" type="Button" parent="Levels" groups=["level_buttons"]]
+[node name="FirstThirtyFiveButton" type="Button" parent="Levels" unique_id=1514020234 groups=["level_buttons"]]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = -1
@@ -146,7 +146,7 @@ theme_override_font_sizes/font_size = 24
 text = "LEVEL 4 - PLAY"
 script = ExtResource("5_trl3s")
 
-[node name="AllHiraganaButton" type="Button" parent="Levels" groups=["level_buttons"]]
+[node name="AllHiraganaButton" type="Button" parent="Levels" unique_id=2079361523 groups=["level_buttons"]]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = -1
@@ -166,7 +166,7 @@ theme_override_font_sizes/font_size = 24
 text = "LEVEL 5 - PLAY"
 script = ExtResource("6_u3vox")
 
-[node name="WIPButton" type="Button" parent="Levels"]
+[node name="WIPButton" type="Button" parent="Levels" unique_id=653103446]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = -1

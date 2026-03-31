@@ -1,8 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://dou5sk06gbaqa"]
+[gd_scene format=3 uid="uid://dou5sk06gbaqa"]
 
 [ext_resource type="Script" uid="uid://d0dk5xm2a7n1s" path="res://scripts/start_screen.gd" id="1_vn56n"]
 [ext_resource type="Texture2D" uid="uid://c7nnbufssmhhr" path="res://backgrounds/background-dojo.png" id="2_m73xm"]
-[ext_resource type="Theme" uid="uid://c1g8xir7v6cmx" path="res://resources/startScreen.tres" id="3_qnop8"]
+[ext_resource type="Theme" uid="uid://c1g8xir7v6cmx" path="res://resources/tres-files/startScreen.tres" id="3_qnop8"]
 [ext_resource type="FontFile" uid="uid://dks0mgfsw88e1" path="res://resources/fonts/BoldPixels.otf" id="4_dclkl"]
 [ext_resource type="Texture2D" uid="uid://bgnq2pyslvvss" path="res://images/kana kenshin logo.png" id="4_qnop8"]
 
@@ -12,7 +12,7 @@ modulate_color = Color(0.41784823, 0.42838323, 0.5181978, 1)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3pj0e"]
 
-[node name="Start" type="Control"]
+[node name="Start" type="Control" unique_id=1780821981]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -21,7 +21,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_vn56n")
 
-[node name="Panel" type="Panel" parent="."]
+[node name="Panel" type="Panel" parent="." unique_id=1145964712]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = 15
@@ -31,7 +31,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_w8rx1")
 
-[node name="Button" type="Button" parent="."]
+[node name="Button" type="Button" parent="." unique_id=1147381441]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = -1
@@ -54,7 +54,7 @@ theme_override_font_sizes/font_size = 60
 theme_override_styles/focus = SubResource("StyleBoxEmpty_3pj0e")
 text = "Start Game"
 
-[node name="Button2" type="Button" parent="."]
+[node name="Button2" type="Button" parent="." unique_id=786638115]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = -1
@@ -72,7 +72,7 @@ theme_override_fonts/font = ExtResource("4_dclkl")
 theme_override_font_sizes/font_size = 32
 text = "OPTIONS"
 
-[node name="Button3" type="Button" parent="."]
+[node name="Button3" type="Button" parent="." unique_id=1314956514]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = -1
@@ -90,7 +90,7 @@ theme_override_fonts/font = ExtResource("4_dclkl")
 theme_override_font_sizes/font_size = 32
 text = "EXIT"
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="TextureRect" type="TextureRect" parent="." unique_id=75486354]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = -1

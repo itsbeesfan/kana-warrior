@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="PlayerData" load_steps=19 format=3 uid="uid://dxxcyra8e66vo"]
+[gd_resource type="Resource" script_class="PlayerData" format=3 uid="uid://dxxcyra8e66vo"]
 
 [ext_resource type="Texture2D" uid="uid://chedse1n5fo8c" path="res://sprites/player-1-idle-Sheet.png" id="1_7l5e6"]
 [ext_resource type="Texture2D" uid="uid://0evigqwl5nf8" path="res://sprites/player-1-punch-Sheet.png" id="1_g671e"]

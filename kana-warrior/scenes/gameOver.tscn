@@ -1,10 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://qf1nkqpaiikb"]
+[gd_scene format=3 uid="uid://qf1nkqpaiikb"]
 
 [ext_resource type="Script" uid="uid://d1m4pn73bnefw" path="res://scripts/game_over.gd" id="1_ouftm"]
 [ext_resource type="Texture2D" uid="uid://bgwe156r2bclj" path="res://backgrounds/game-over.png" id="2_dh54o"]
-[ext_resource type="Theme" uid="uid://c1g8xir7v6cmx" path="res://resources/startScreen.tres" id="3_gob2e"]
+[ext_resource type="Theme" uid="uid://c1g8xir7v6cmx" path="res://resources/tres-files/startScreen.tres" id="3_gob2e"]
 
-[node name="Over" type="Control"]
+[node name="Over" type="Control" unique_id=1090129406]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -13,7 +13,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_ouftm")
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="TextureRect" type="TextureRect" parent="." unique_id=803008405]
 modulate = Color(0.8346143, 0.8346143, 0.8346143, 1)
 texture_filter = 1
 layout_mode = 1
@@ -24,7 +24,7 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("2_dh54o")
 
-[node name="tryAgain" type="Button" parent="."]
+[node name="tryAgain" type="Button" parent="." unique_id=1609943722]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = -1
@@ -42,7 +42,7 @@ theme = ExtResource("3_gob2e")
 theme_override_font_sizes/font_size = 24
 text = "TRY AGAIN"
 
-[node name="rageQuit" type="Button" parent="."]
+[node name="rageQuit" type="Button" parent="." unique_id=1251538460]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = -1

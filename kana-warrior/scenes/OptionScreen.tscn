@@ -1,15 +1,23 @@
-[gd_scene load_steps=6 format=3 uid="uid://ctdx0qikq80xf"]
+[gd_scene format=3 uid="uid://ctdx0qikq80xf"]
 
 [ext_resource type="Script" uid="uid://pgm1e52ye55t" path="res://scripts/options.gd" id="1_mhnwv"]
-[ext_resource type="Theme" uid="uid://c1g8xir7v6cmx" path="res://resources/startScreen.tres" id="2_gj583"]
+[ext_resource type="Theme" uid="uid://c1g8xir7v6cmx" path="res://resources/tres-files/startScreen.tres" id="2_gj583"]
 [ext_resource type="FontFile" uid="uid://d1ys2ane6ax25" path="res://resources/fonts/Pix32.ttf" id="2_mpfbj"]
 [ext_resource type="Texture2D" uid="uid://ddwvbwmlgvyak" path="res://backgrounds/background-city.png" id="2_w7akd"]
+[ext_resource type="FontFile" uid="uid://dks0mgfsw88e1" path="res://resources/fonts/BoldPixels.otf" id="5_hpwha"]
+[ext_resource type="Script" uid="uid://bdxddwwljljkq" path="res://scenes/music_slider.gd" id="6_j5auf"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hpwha"]
 texture = ExtResource("2_w7akd")
 modulate_color = Color(0.41784823, 0.42838323, 0.5181978, 1)
 
-[node name="Control" type="Control"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j5auf"]
+bg_color = Color(0.30532002, 0.27397564, 0.5046688, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hpwha"]
+bg_color = Color(0.29086223, 0.26041615, 0.4833039, 1)
+
+[node name="Control" type="Control" unique_id=1055441987]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -18,7 +26,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_mhnwv")
 
-[node name="Panel" type="Panel" parent="."]
+[node name="Panel" type="Panel" parent="." unique_id=1770333039]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = 15
@@ -28,7 +36,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_hpwha")
 
-[node name="Label" type="Label" parent="."]
+[node name="title" type="Label" parent="." unique_id=663298154]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = -1
@@ -46,7 +54,7 @@ theme_override_font_sizes/font_size = 48
 text = "OPTIONS MENU"
 horizontal_alignment = 1
 
-[node name="Label2" type="Label" parent="."]
+[node name="credits" type="Label" parent="." unique_id=1064390268]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = -1
@@ -65,7 +73,27 @@ theme_override_font_sizes/font_size = 12
 text = "made by tatiana morales / @beesfan"
 horizontal_alignment = 1
 
-[node name="Button" type="Button" parent="."]
+[node name="disclaimer" type="Label" parent="." unique_id=1485434553]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.30200002
+anchor_right = 0.5
+anchor_bottom = 0.30200002
+offset_left = -192.0
+offset_top = -11.196014
+offset_right = 192.0
+offset_bottom = 11.803986
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_gj583")
+theme_override_fonts/font = ExtResource("5_hpwha")
+theme_override_font_sizes/font_size = 24
+text = "not much here yet. mind checking back later? :)"
+horizontal_alignment = 1
+
+[node name="backButton" type="Button" parent="." unique_id=818870514]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = -1
@@ -83,4 +111,77 @@ theme = ExtResource("2_gj583")
 theme_override_font_sizes/font_size = 36
 text = "BACK"
 
-[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[node name="musicSlider" type="HSlider" parent="." unique_id=959509212]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -184.5
+offset_top = -8.0
+offset_right = 244.0
+offset_bottom = 8.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_j5auf")
+max_value = 15.0
+step = 0.02
+value = 5.0
+script = ExtResource("6_j5auf")
+audio_bus_name = "music"
+
+[node name="music" type="Label" parent="musicSlider" unique_id=1857586428]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.30600002
+anchor_top = 0.5
+anchor_right = 0.30600002
+anchor_bottom = 0.5
+offset_left = -204.62102
+offset_top = -12.0
+offset_right = -136.62102
+offset_bottom = 12.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("5_hpwha")
+theme_override_font_sizes/font_size = 24
+text = "MUSIC"
+
+[node name="sfxSlider" type="HSlider" parent="." unique_id=998992600]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.56200004
+anchor_right = 0.5
+anchor_bottom = 0.56200004
+offset_left = -184.5
+offset_top = -8.176025
+offset_right = 244.0
+offset_bottom = 7.8239746
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_hpwha")
+value = 40.0
+
+[node name="sfx" type="Label" parent="sfxSlider" unique_id=1423220716]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.30600002
+anchor_top = 0.5
+anchor_right = 0.30600002
+anchor_bottom = 0.5
+offset_left = -204.62102
+offset_top = -12.0
+offset_right = -136.62102
+offset_bottom = 12.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("5_hpwha")
+theme_override_font_sizes/font_size = 24
+text = "SFX"
+
+[connection signal="pressed" from="backButton" to="." method="_on_button_pressed"]
+[connection signal="value_changed" from="musicSlider" to="musicSlider" method="_on_value_changed"]

@@ -1,10 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://c6mnoapp60ypa"]
+[gd_scene format=3 uid="uid://c6mnoapp60ypa"]
 
 [ext_resource type="Script" uid="uid://dkl3hrlkpwhtj" path="res://scripts/level_complete.gd" id="1_yuutf"]
 [ext_resource type="Texture2D" uid="uid://by5ih4qs21wda" path="res://backgrounds/level_complete.png" id="2_u2cba"]
-[ext_resource type="Theme" uid="uid://c1g8xir7v6cmx" path="res://resources/startScreen.tres" id="3_tu17h"]
+[ext_resource type="Theme" uid="uid://c1g8xir7v6cmx" path="res://resources/tres-files/startScreen.tres" id="3_tu17h"]
 
-[node name="LevelComplete" type="Control"]
+[node name="LevelComplete" type="Control" unique_id=1450242642]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -13,7 +13,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_yuutf")
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1418468309]
 modulate = Color(0.8346143, 0.8346143, 0.8346143, 1)
 texture_filter = 1
 layout_mode = 1
@@ -24,7 +24,7 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("2_u2cba")
 
-[node name="NextButton" type="Button" parent="."]
+[node name="NextButton" type="Button" parent="." unique_id=404897356]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = -1
@@ -42,7 +42,7 @@ theme = ExtResource("3_tu17h")
 theme_override_font_sizes/font_size = 24
 text = "NEXT LEVEL"
 
-[node name="rageQuit" type="Button" parent="."]
+[node name="rageQuit" type="Button" parent="." unique_id=602483418]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = -1
@@ -61,3 +61,4 @@ theme_override_font_sizes/font_size = 24
 text = "RAGEQUIT."
 
 [connection signal="pressed" from="NextButton" to="." method="_on_next_button_pressed"]
+[connection signal="pressed" from="rageQuit" to="." method="_on_rage_quit_pressed"]

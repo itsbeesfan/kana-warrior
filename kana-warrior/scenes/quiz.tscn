@@ -1,8 +1,8 @@
-[gd_scene load_steps=41 format=3 uid="uid://0g10r0q38tuq"]
+[gd_scene format=3 uid="uid://0g10r0q38tuq"]
 
 [ext_resource type="Script" uid="uid://cw3c1rtetm36v" path="res://scripts/quiz.gd" id="1_bn6h1"]
 [ext_resource type="Texture2D" uid="uid://c7nnbufssmhhr" path="res://backgrounds/background-dojo.png" id="2_t0h63"]
-[ext_resource type="Theme" uid="uid://c1g8xir7v6cmx" path="res://resources/startScreen.tres" id="3_euwqo"]
+[ext_resource type="Theme" uid="uid://c1g8xir7v6cmx" path="res://resources/tres-files/startScreen.tres" id="3_euwqo"]
 [ext_resource type="Script" uid="uid://b503ow8acjsdh" path="res://scripts/player.gd" id="3_lcje5"]
 [ext_resource type="Texture2D" uid="uid://0evigqwl5nf8" path="res://sprites/player-1-punch-Sheet.png" id="4_euwqo"]
 [ext_resource type="Texture2D" uid="uid://chedse1n5fo8c" path="res://sprites/player-1-idle-Sheet.png" id="5_vwwmd"]
@@ -222,7 +222,7 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="quiz" type="Control"]
+[node name="quiz" type="Control" unique_id=1971480483]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -231,14 +231,14 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_bn6h1")
 
-[node name="Background" type="Sprite2D" parent="."]
+[node name="Background" type="Sprite2D" parent="." unique_id=2143728972]
 modulate = Color(0.796243, 0.796243, 0.796243, 1)
 texture_filter = 1
 position = Vector2(577.2222, 325)
 scale = Vector2(3.588889, 3.588889)
 texture = ExtResource("2_t0h63")
 
-[node name="hiragana" type="Label" parent="."]
+[node name="hiragana" type="Label" parent="." unique_id=1617231937]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.5
@@ -254,7 +254,7 @@ theme = ExtResource("3_euwqo")
 theme_override_fonts/font = ExtResource("11_euwqo")
 theme_override_font_sizes/font_size = 38
 
-[node name="buttons" type="HBoxContainer" parent="."]
+[node name="buttons" type="HBoxContainer" parent="." unique_id=2084948842]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.5
@@ -269,7 +269,7 @@ grow_horizontal = 2
 grow_vertical = 0
 alignment = 1
 
-[node name="choice1" type="Button" parent="buttons"]
+[node name="choice1" type="Button" parent="buttons" unique_id=171356646]
 texture_filter = 1
 custom_minimum_size = Vector2(50, 0)
 layout_mode = 2
@@ -277,7 +277,7 @@ theme = ExtResource("3_euwqo")
 theme_override_font_sizes/font_size = 24
 theme_override_styles/focus = SubResource("StyleBoxEmpty_k7kv1")
 
-[node name="choice2" type="Button" parent="buttons"]
+[node name="choice2" type="Button" parent="buttons" unique_id=1630535895]
 texture_filter = 1
 custom_minimum_size = Vector2(50, 0)
 layout_mode = 2
@@ -285,7 +285,7 @@ theme = ExtResource("3_euwqo")
 theme_override_font_sizes/font_size = 24
 theme_override_styles/focus = SubResource("StyleBoxEmpty_k7kv1")
 
-[node name="choice3" type="Button" parent="buttons"]
+[node name="choice3" type="Button" parent="buttons" unique_id=109742440]
 texture_filter = 1
 custom_minimum_size = Vector2(50, 0)
 layout_mode = 2
@@ -293,17 +293,17 @@ theme = ExtResource("3_euwqo")
 theme_override_font_sizes/font_size = 24
 theme_override_styles/focus = SubResource("StyleBoxEmpty_k7kv1")
 
-[node name="Player" type="Node2D" parent="."]
+[node name="Player" type="Node2D" parent="." unique_id=1758098129]
 script = ExtResource("3_lcje5")
 
-[node name="Sprite" type="AnimatedSprite2D" parent="Player"]
+[node name="Sprite" type="AnimatedSprite2D" parent="Player" unique_id=1742159167]
 texture_filter = 1
 position = Vector2(477, 457.00003)
 scale = Vector2(5.25, 5.25)
 sprite_frames = SubResource("SpriteFrames_6tpgk")
 animation = &"idle"
 
-[node name="HealthBar" type="ProgressBar" parent="Player"]
+[node name="HealthBar" type="ProgressBar" parent="Player" unique_id=434210819]
 offset_left = 125.0
 offset_top = 612.0
 offset_right = 458.0
@@ -311,17 +311,17 @@ offset_bottom = 639.0
 theme = ExtResource("3_euwqo")
 show_percentage = false
 
-[node name="Sensei" type="Node2D" parent="."]
+[node name="Sensei" type="Node2D" parent="." unique_id=368333617]
 script = ExtResource("6_16nxq")
 
-[node name="Sprite" type="AnimatedSprite2D" parent="Sensei"]
+[node name="Sprite" type="AnimatedSprite2D" parent="Sensei" unique_id=479550326]
 texture_filter = 1
 position = Vector2(636, 462.99997)
 scale = Vector2(5.25, 5.25)
 sprite_frames = SubResource("SpriteFrames_rayto")
 animation = &"attack"
 
-[node name="HealthBar" type="ProgressBar" parent="Sensei"]
+[node name="HealthBar" type="ProgressBar" parent="Sensei" unique_id=2034839312]
 offset_left = 693.0
 offset_top = 612.0
 offset_right = 1026.0
@@ -329,12 +329,12 @@ offset_bottom = 639.0
 theme = ExtResource("3_euwqo")
 show_percentage = false
 
-[node name="KanaPreview" parent="." instance=ExtResource("9_t0h63")]
+[node name="KanaPreview" parent="." unique_id=46088036 instance=ExtResource("9_t0h63")]
 visible = false
 layout_mode = 1
 theme = ExtResource("3_euwqo")
 
-[node name="Countdown" type="Label" parent="."]
+[node name="Countdown" type="Label" parent="." unique_id=1825768324]
 visible = false
 texture_filter = 1
 layout_mode = 1
@@ -350,7 +350,7 @@ text = "3"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="BlackFade" type="ColorRect" parent="."]
+[node name="BlackFade" type="ColorRect" parent="." unique_id=1282344744]
 visible = false
 modulate = Color(0, 0, 0, 1)
 layout_mode = 1

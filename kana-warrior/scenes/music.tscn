@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://qh7p4aqxsfsb"]
+
+[ext_resource type="AudioStream" uid="uid://br6lwmlpre56m" path="res://resources/How Sweet (Instrumental).mp3" id="1_05ggv"]
+
+[node name="music" type="AudioStreamPlayer" unique_id=46735826]
+stream = ExtResource("1_05ggv")
+volume_db = -15.476
+autoplay = true
+parameters/looping = true
