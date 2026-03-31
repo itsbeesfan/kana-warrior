@@ -1,5 +1,6 @@
 # kana kenshin
 ### a game to learn japanese kana!!
+play on itch! https://beesfan.itch.io/kana-kenshin
 
 -----
 ### what is this?
